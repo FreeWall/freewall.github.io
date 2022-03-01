@@ -1,1 +1,0 @@
-{"version":3,"file":"main.css","mappings":"AAAA,QACC,UACA,gB","sources":["webpack://freewall.github.io/./src/app.less"],"sourcesContent":[".app {\n\tcolor: red;\n\tfont-weight: bold;\n}\n"],"names":[],"sourceRoot":""}
