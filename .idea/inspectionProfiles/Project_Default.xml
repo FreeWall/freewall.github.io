@@ -1,0 +1,110 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Anonymous2MethodRef" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AnonymousHasLambdaAlternative" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BooleanMethodIsAlwaysInverted" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Convert2Lambda" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssFloatPxLength" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidAtRule" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidCharsetRule" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidElement" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidFunction" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidHtmlTagReference" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidImport" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidMediaFeature" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidPropertyValue" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidPseudoSelector" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssMissingComma" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssNegativeValue" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssNoGenericFontName" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssOptimizeSimilarProperties" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssOverwrittenProperties" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssRedundantUnit" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssReplaceWithShorthandSafely" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssUnitlessNumber" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssUnknownProperty" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="myCustomPropertiesEnabled" value="false" />
+      <option name="myIgnoreVendorSpecificProperties" value="false" />
+      <option name="myCustomPropertiesList">
+        <value>
+          <list size="0" />
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="CssUnknownTarget" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssUnresolvedClass" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssUnresolvedCustomProperty" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssUnresolvedCustomPropertySet" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssUnusedSymbol" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="ES6ConvertVarToLetConst" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlDeprecatedAttribute" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlFormInputWithoutLabel" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlUnknownAnchorTarget" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="data-href" />
+            <item index="1" class="java.lang.String" itemvalue="data-no-href" />
+            <item index="2" class="java.lang.String" itemvalue="data-form-submit" />
+            <item index="3" class="java.lang.String" itemvalue="data-form-confirm" />
+            <item index="4" class="java.lang.String" itemvalue="data-selector" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="div" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTarget" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JSEqualityComparisonWithCoercion" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JSJQueryEfficiency" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JSUnresolvedLibraryURL" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JSXNamespaceValidation" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="LessResolvedByNameOnly" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpComposerExtensionStubsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpDocMissingReturnTagInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpDocMissingThrowsInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpDocSignatureInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpFullyQualifiedNameUsageInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpIncludeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpPossiblePolymorphicInvocationInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpStatementHasEmptyBodyInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpUndefinedClassInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="DONT_REPORT_MULTI_RESOLVE" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnused" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="SimplifiableConditionalExpression" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+    <inspection_tool class="SqlDialectInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="TestCaseAnnotation" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="TrivialIf" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnnecessaryEnumModifier" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="WeakerAccess" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="SUGGEST_PACKAGE_LOCAL_FOR_MEMBERS" value="true" />
+      <option name="SUGGEST_PACKAGE_LOCAL_FOR_TOP_CLASSES" value="true" />
+      <option name="SUGGEST_PRIVATE_FOR_INNERS" value="false" />
+    </inspection_tool>
+  </profile>
+</component>
