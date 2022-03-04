@@ -4,7 +4,7 @@
   "author": "FreeWall",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode development --open",
+    "dev": "webpack serve --mode development --open --hot",
     "build": "webpack --mode production",
     "postbuild": "react-snap"
   },
@@ -25,6 +25,7 @@
     "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "less-loader": "^10.2.0",
     "less-plugin-clean-css": "^1.5.1",
@@ -32,9 +33,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-snap": "^1.23.0",
+    "style-resources-loader": "^1.5.0",
     "ts-loader": "^9.2.6",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "svg-inline-loader": "^0.8.2"
   }
 }

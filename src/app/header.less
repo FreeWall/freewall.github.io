@@ -1,0 +1,88 @@
+header {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: @globalWidths[desktop];
+    margin: 0px auto;
+    padding: 24px;
+}
+
+.logo {
+
+}
+
+.logoImage {
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+        vertical-align: middle;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+}
+
+.logoSplitter {
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 60px;
+    background: @globalColors[conversion];
+    margin: 0px 20px;
+}
+
+.logoText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 2px;
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.links {
+
+}
+
+.link {
+    &:last-child {
+        margin-left: 40px;
+    }
+
+    &:hover .linkName {
+        text-decoration: underline;
+    }
+}
+
+.linkIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+
+    path {
+        fill: #333333;
+    }
+}
+
+.linkName {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px 0px;
+    color: @globalColors[text];
+    font-size: 16px;
+    font-weight: 500;
+}
