@@ -1,0 +1,64 @@
+footer {
+    width: 100%;
+    background: #383e42;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: @globalWidths[desktop];
+    margin: 0px auto;
+    padding: 24px;
+}
+
+.author {
+    font-size: 13px;
+    line-height: 1.6em;
+}
+
+.fullname {
+    color: #cccccc;
+    font-weight: 600;
+}
+
+.address {
+    color: #aaaaaa;
+    font-weight: 500;
+}
+
+.links {
+
+}
+
+.link {
+    &:last-child {
+        margin-left: 40px;
+    }
+
+    &:hover .linkName {
+        text-decoration: underline;
+    }
+}
+
+.linkIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+
+    path {
+        fill: #cccccc;
+    }
+}
+
+.linkName {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px 0px;
+    color: #cccccc;
+    font-size: 16px;
+    font-weight: 500;
+}

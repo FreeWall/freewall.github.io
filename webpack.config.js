@@ -24,9 +24,9 @@ module.exports = function (env, argv) {
     }));
 
     let options = {
-        entry: './src/index.jsx',
+        entry: './src/index.tsx',
         output: {
-            path: path.join(__dirname, "dist"),
+            path: path.join(__dirname, 'dist'),
             filename: '[name].js',
         },
         mode: argv.mode,
@@ -43,6 +43,14 @@ module.exports = function (env, argv) {
         module: {
             rules: [
                 {
+                    test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
+                    loader: 'file-loader'
+                },
+                {
+                    test: /\.(svg)(\?[a-z0-9=.]+)?$/,
+                    loader: 'svg-inline-loader'
+                },
+                {
                     test: /\.(mjs|jsx)$/,
                     exclude: /node_modules/,
                     resolve: {
@@ -51,11 +59,11 @@ module.exports = function (env, argv) {
                     use: {
                         loader: 'babel-loader',
                         options: {
+                            babelrc: false,
                             presets: [
                                 '@babel/preset-env',
                                 '@babel/preset-react',
                             ],
-                            babelrc: false
                         }
                     }
                 },
@@ -67,7 +75,7 @@ module.exports = function (env, argv) {
                         options: {
                             context: path.resolve(__dirname, './'),
                             configFile: 'tsconfig.json',
-                            onlyCompileBundledFiles: true
+                            onlyCompileBundledFiles: true,
                         }
                     }
                 },
@@ -82,7 +90,6 @@ module.exports = function (env, argv) {
                                 url: false,
                                 modules: {
                                     localIdentName: (argv.mode !== 'production' ? '[local]--[hash:base64:6]' : '[hash:base64:6]'),
-                                    localIdentHashSalt: '[name]'
                                 }
                             }
                         },
@@ -102,6 +109,16 @@ module.exports = function (env, argv) {
                             },
                         },
                     ],
+                },
+                {
+                    test: /\.(css|less)$/i,
+                    loader: 'style-resources-loader',
+                    options: {
+                        patterns: [
+                            './src/globals.less',
+                        ],
+                        injector: 'append',
+                    }
                 },
             ]
         },
