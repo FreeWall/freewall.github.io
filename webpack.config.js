@@ -21,10 +21,12 @@ module.exports = function (env, argv) {
 
     plugins.push(new HtmlWebpackPlugin({
         template: './src/index.html',
+        favicon: './assets/images/profilephoto.png',
+        hash: true,
         minify: {
             collapseWhitespace: false,
             preserveLineBreaks: true
-        }
+        },
     }));
 
     let options = {
