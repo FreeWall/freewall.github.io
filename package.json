@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode development --open --hot",
-    "build": "webpack --mode production",
-    "postbuild": "react-snap"
+    "build": "webpack --mode production"
   },
   "reactSnap": {
     "source": "dist",
     "minifyHtml": {
       "collapseWhitespace": false,
-      "removeComments": false
+      "removeComments": false,
+      "preserveLineBreaks": true
     },
     "preconnectThirdParty": false
   },

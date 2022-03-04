@@ -21,6 +21,10 @@ module.exports = function (env, argv) {
 
     plugins.push(new HtmlWebpackPlugin({
         template: './src/index.html',
+        minify: {
+            collapseWhitespace: false,
+            preserveLineBreaks: true
+        }
     }));
 
     let options = {
