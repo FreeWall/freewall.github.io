@@ -1,19 +1,16 @@
-name: CI
+name: Deploy to GitHub Pages
 on: [push]
 jobs:
-  tests:
+  deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/master' }}
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v2.3.1
       - run: npm ci
       - run: npm run build
-      - name: List built files
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: ls dist
-      - name: Maybe deploy 🚀
-        if: ${{ github.ref == 'refs/heads/master' }}
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
+          branch: gh-pages
+          folder: dist
