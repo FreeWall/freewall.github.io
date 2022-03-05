@@ -1,13 +1,20 @@
 import Hero from './main/hero';
 import Projects from './main/projects';
+import {ProjectProps} from './main/projects/project';
 
-export default class Main extends React.Component<{}, {}> {
+interface MainProps {
+    projects: ProjectProps[];
+}
+
+export default class Main extends React.Component<MainProps, {}> {
 
     render() {
         return (
             <main>
                 <Hero/>
-                <Projects/>
+                <Projects
+                    projects={this.props.projects}
+                />
             </main>
         )
     }

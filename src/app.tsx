@@ -2,6 +2,7 @@ import styles from './app.less';
 import Header from './app/header';
 import Main from './app/main';
 import Footer from './app/footer';
+import {ProjectProps} from './app/main/projects/project';
 
 export interface LinkProps {
     name: string;
@@ -16,6 +17,7 @@ interface AppProps {
         address: string[];
     };
     links: LinkProps[];
+    projects: ProjectProps[];
 }
 
 export default class App extends React.Component<AppProps, {}> {
@@ -32,7 +34,9 @@ export default class App extends React.Component<AppProps, {}> {
                     subtitle={this.props.author.label}
                     links={this.props.links}
                 />
-                <Main/>
+                <Main
+                    projects={this.props.projects}
+                />
                 <Footer
                     fullname={this.props.author.fullname}
                     address={this.props.author.address}
