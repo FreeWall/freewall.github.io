@@ -1,6 +1,7 @@
 import App from './app';
 import emailIcon from '../assets/images/icons/email.svg';
 import githubIcon from '../assets/images/icons/github.svg';
+import tmpIcon from '../assets/images/favicon.png';
 
 const _App = (
     <App
@@ -45,9 +46,16 @@ const _App = (
                 technologies: [
                     'PHP', 'MySQL', 'JavaScript', 'jQuery', 'Nette',
                 ],
-                thumbnail: require('../assets/images/projects/shopmaker/screenshot1.png?width=256').default as string,
+                thumbnail: require('../assets/images/projects/shopmaker/screenshot1.png?width=512').default as string,
                 images: [
-                    require('../assets/images/projects/shopmaker/screenshot1.png').default as string,
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot1.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot1.png?width=512').default as string,
+                    },
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                    },
                 ]
             },
             {
@@ -90,6 +98,78 @@ const _App = (
                     'PHP', 'MySQL', 'C', 'JavaScript',
                 ],
                 thumbnail: require('../assets/images/projects/spseplzen.png?width=256').default as string,
+            },
+        ]}
+        skills={[
+            {
+                icon: tmpIcon,
+                name: 'PHP',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+            },
+            {
+                icon: tmpIcon,
+                name: 'HTML5, CSS3, LESS',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+            },
+            {
+                icon: tmpIcon,
+                name: 'MySQL',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+            },
+            {
+                icon: tmpIcon,
+                name: 'TypeScript, JavaScript',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+            },
+            {
+                icon: '',
+                name: 'Magento',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'React',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'Nette',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'jQuery',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'Java',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'Jest',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'Apache',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'Webpack',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'Linux Debian',
+                description: '',
+            },
+            {
+                icon: '',
+                name: 'Git',
+                description: '',
             },
         ]}
     />

@@ -13,7 +13,7 @@ export default class Hero extends React.Component<{}, {}> {
                         </div>
                         <div className={styles.items}>
                             <div className={styles.item}>
-                                <span>vývoj webových stránek a aplikací</span>
+                                <span>tvorba webových stránek a aplikací</span>
                             </div>
                             <div className={styles.item}>
                                 <span>front-end, UX a UI design</span>

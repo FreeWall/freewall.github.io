@@ -184,10 +184,21 @@
 
     &:hover {
         border-color: @globalColors[conversion];
+
+        img {
+            transform: scale(1.1);
+            vertical-align: middle;
+        }
+
+        .count {
+            border-color: @globalColors[conversion];
+        }
     }
 
     img {
         width: 300px;
+        transition: transform 0.2s;
+        will-change: transform;
     }
 }
 
@@ -207,9 +218,13 @@
 .countIcon {
     display: inline-block;
     vertical-align: middle;
-    width: 24px;
-    height: 24px;
+    width: 22px;
     margin-right: 8px;
+
+    svg {
+        display: block;
+        vertical-align: middle;
+    }
 
     path {
         fill: #506069;
@@ -221,4 +236,5 @@
     vertical-align: middle;
     color: #506069;
     font-weight: 600;
+    line-height: 1em;
 }

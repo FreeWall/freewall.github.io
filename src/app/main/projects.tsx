@@ -22,6 +22,8 @@ export default class Projects extends React.Component<ProjectsProps, {}> {
                 visible: true,
                 title: project.props.name,
                 subtitle: project.props.subtitle,
+                images: project.props.images,
+                currentImageIndex: 0,
             };
         });
     }

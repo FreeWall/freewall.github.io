@@ -18,7 +18,7 @@ export default class Header extends React.Component<HeaderProps, {}> {
                 <div className={styles.content}>
                     <div className={styles.logo}>
                         <div className={styles.logoImage}>
-                            <img src={profilephoto} alt={this.props.fullname}/>
+                            <img src={profilephoto} alt=""/>
                         </div>
                         <div className={styles.logoSplitter}/>
                         <div className={styles.logoText}>

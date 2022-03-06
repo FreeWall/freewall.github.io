@@ -1,11 +1,84 @@
 .wrapper {
-
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
 }
 
 .overlay {
-
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 901;
 }
 
 .gallery {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    @margin: 60px;
+    top: @margin;
+    left: @margin;
+    width: calc(100% - (@margin * 2));
+    height: calc(100% - (@margin * 2));
+    background: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 902;
+}
 
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    padding: 20px;
+    cursor: pointer;
+
+    &:hover path {
+        fill: #333333;
+    }
+
+    path {
+        fill: #aaaaaa;
+    }
+}
+
+.preview {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+
+    img {
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.thumbnails {
+    padding: 20px;
+    padding-top: 80px;
+    background: @globalColors[backgroundSlight];
+
+    .thumbnail {
+        margin-bottom: 20px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+
+        &.current {
+            border-color: @globalColors[conversion];
+            box-shadow: 0px 0px 0px 1px @globalColors[conversion];
+        }
+
+        img {
+            width: 180px;
+            max-width: 180px;
+        }
+    }
 }

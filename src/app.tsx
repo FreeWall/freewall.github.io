@@ -3,6 +3,7 @@ import Header from './app/header';
 import Main from './app/main';
 import Footer from './app/footer';
 import {ProjectProps} from './app/main/projects/project';
+import {SkillProps} from './app/main/skills/skill';
 
 export interface LinkProps {
     name: string;
@@ -18,6 +19,7 @@ interface AppProps {
     };
     links: LinkProps[];
     projects: ProjectProps[];
+    skills: SkillProps[];
 }
 
 export default class App extends React.Component<AppProps, {}> {
@@ -36,6 +38,7 @@ export default class App extends React.Component<AppProps, {}> {
                 />
                 <Main
                     projects={this.props.projects}
+                    skills={this.props.skills}
                 />
                 <Footer
                     fullname={this.props.author.fullname}

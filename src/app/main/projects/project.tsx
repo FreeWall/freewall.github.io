@@ -1,5 +1,10 @@
 import styles from './project.less';
-import countIcon from '/assets/images/icons/github.svg';
+import imagesIcon from '/assets/images/icons/images.svg';
+
+export interface ProjectImage {
+    source: string;
+    thumbnail: string;
+}
 
 export interface ProjectProps {
     name: string;
@@ -10,13 +15,15 @@ export interface ProjectProps {
     description?: string;
     technologies?: string[];
     thumbnail?: string;
-    images?: string[];
+    images?: ProjectImage[];
     onGalleryClick?: (project: Project) => void;
 }
 
 export default class Project extends React.Component<ProjectProps, {}> {
 
     render() {
+        const imagesCountWord: string = this.props.images ? (this.props.images.length > 4 ? 'fotek' : 'fotky') : null;
+
         return (
             <div className={styles.project}>
                 <div className={styles.yearsColumn}>
@@ -44,7 +51,7 @@ export default class Project extends React.Component<ProjectProps, {}> {
                                 <div className={styles.thumbnail} onClick={() => this.props.onGalleryClick(this)}>
                                     <img src={this.props.thumbnail} alt={this.props.name}/>
                                     <div className={styles.count}>
-                                        <span className={styles.countIcon} dangerouslySetInnerHTML={{__html: countIcon}}/><span className={styles.countLabel}>{this.props.images.length} fotek</span>
+                                        <span className={styles.countIcon} dangerouslySetInnerHTML={{__html: imagesIcon}}/><span className={styles.countLabel}>{this.props.images.length} {imagesCountWord}</span>
                                     </div>
                                 </div>
                             )}
