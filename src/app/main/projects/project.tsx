@@ -1,5 +1,5 @@
 import styles from './project.less';
-import imagesIcon from '/assets/images/icons/images.svg';
+import imagesIcon from '/assets/images/icons/images.inline.svg';
 
 export interface ProjectImage {
     source: string;
