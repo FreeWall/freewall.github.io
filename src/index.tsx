@@ -1,7 +1,4 @@
 import App from './app';
-import emailIcon from '../assets/images/icons/email.svg';
-import githubIcon from '../assets/images/icons/github.svg';
-import tmpIcon from '../assets/images/favicon.png';
 
 const _App = (
     <App
@@ -17,12 +14,12 @@ const _App = (
             {
                 name: 'info@michalvanek.cz',
                 url: 'mailto:info@michalvanek.cz',
-                icon: emailIcon,
+                icon: require('../assets/images/icons/email.svg') as string,
             },
             {
                 name: 'FreeWall',
                 url: 'https://github.com/FreeWall',
-                icon: githubIcon,
+                icon: require('../assets/images/icons/github.svg') as string,
             },
         ]}
         projects={[
@@ -102,74 +99,74 @@ const _App = (
         ]}
         skills={[
             {
-                icon: tmpIcon,
+                icon: require('../assets/images/skills/php.svg') as string,
                 name: 'PHP',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: tmpIcon,
+                icon: require('../assets/images/skills/html5.svg') as string,
                 name: 'HTML5, CSS3, LESS',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: tmpIcon,
+                icon: require('../assets/images/skills/mysql.svg') as string,
                 name: 'MySQL',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: tmpIcon,
+                icon: require('../assets/images/skills/ts-js.svg') as string,
                 name: 'TypeScript, JavaScript',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/magento.svg') as string,
                 name: 'Magento',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/react.svg') as string,
                 name: 'React',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/nette.svg') as string,
                 name: 'Nette',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/jquery.svg') as string,
                 name: 'jQuery',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/java.svg') as string,
                 name: 'Java',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/jest.svg') as string,
                 name: 'Jest',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/apache.svg') as string,
                 name: 'Apache',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/webpack.svg') as string,
                 name: 'Webpack',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/debian.svg') as string,
                 name: 'Linux Debian',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
             {
-                icon: '',
+                icon: require('../assets/images/skills/git.svg') as string,
                 name: 'Git',
-                description: '',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
             },
         ]}
     />
