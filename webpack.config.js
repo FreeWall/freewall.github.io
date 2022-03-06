@@ -21,10 +21,12 @@ module.exports = function (env, argv) {
 
     plugins.push(new HtmlWebpackPlugin({
         template: './src/index.html',
+        favicon: './assets/images/favicon.png',
+        hash: true,
         minify: {
             collapseWhitespace: false,
             preserveLineBreaks: true
-        }
+        },
     }));
 
     let options = {
@@ -48,7 +50,17 @@ module.exports = function (env, argv) {
             rules: [
                 {
                     test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
-                    loader: 'file-loader'
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: 'assets',
+                            }
+                        },
+                        {
+                            loader: 'webpack-image-resize-loader',
+                        },
+                    ]
                 },
                 {
                     test: /\.(svg)(\?[a-z0-9=.]+)?$/,
@@ -93,7 +105,7 @@ module.exports = function (env, argv) {
                                 sourceMap: true,
                                 url: false,
                                 modules: {
-                                    localIdentName: (argv.mode !== 'production' ? '[local]--[hash:base64:6]' : '[hash:base64:6]'),
+                                    localIdentName: (argv.mode !== 'production' ? '[local]--[hash:base64:5]' : '[hash:base64:5]'),
                                 }
                             }
                         },
