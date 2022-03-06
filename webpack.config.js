@@ -63,8 +63,15 @@ module.exports = function (env, argv) {
                     ]
                 },
                 {
-                    test: /\.(svg)(\?[a-z0-9=.]+)?$/,
-                    loader: 'svg-inline-loader'
+                    test: /\.inline\.svg$/,
+                    loader: 'svg-inline-loader',
+                },
+                {
+                    test: /^(?!.*(\.inline)\.).*\.svg$/,
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'assets',
+                    }
                 },
                 {
                     test: /\.(mjs|jsx)$/,

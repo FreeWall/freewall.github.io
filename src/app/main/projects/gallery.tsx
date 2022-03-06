@@ -1,5 +1,5 @@
 import styles from './gallery.less';
-import closeIcon from '../../../../assets/images/icons/close.svg';
+import closeIcon from '../../../../assets/images/icons/close.inline.svg';
 import {ProjectImage} from './project';
 
 export interface GalleryState {
