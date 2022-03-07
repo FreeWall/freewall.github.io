@@ -12,7 +12,6 @@ export interface GalleryState {
 
 export default class Gallery extends React.Component<{}, GalleryState> {
 
-    private _lastScrollTop: number = 0;
     private _previewRef = React.createRef<HTMLDivElement>();
 
     constructor(props) {
