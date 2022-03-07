@@ -40,7 +40,6 @@ module.exports = function (env, argv) {
         mode: argv.mode,
         devtool: 'source-map',
         externals: {
-            'jquery': 'jQuery',
             'react': 'React',
             'react-dom': 'ReactDOM',
         },

@@ -53,6 +53,18 @@ const _App = (
                         source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
                         thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
                     },
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                    },
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                    },
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                    },
                 ]
             },
             {

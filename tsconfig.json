@@ -20,7 +20,6 @@
     ],
     "types": [
       "webpack-env",
-      "jquery",
       "react",
       "react-dom"
     ]
