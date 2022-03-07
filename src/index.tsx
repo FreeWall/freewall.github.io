@@ -53,6 +53,18 @@ const _App = (
                         source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
                         thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
                     },
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                    },
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                    },
+                    {
+                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                    },
                 ]
             },
             {
@@ -99,74 +111,116 @@ const _App = (
         ]}
         skills={[
             {
-                icon: require('../assets/images/skills/php.svg').default as string,
                 name: 'PHP',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/php.svg').default.url,
+                    height: 26,
+                },
             },
             {
-                icon: require('../assets/images/skills/html5.svg').default as string,
                 name: 'HTML5, CSS3, LESS',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/html5.svg').default.url,
+                    height: 56,
+                },
             },
             {
-                icon: require('../assets/images/skills/mysql.svg').default as string,
                 name: 'MySQL',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/mysql.svg').default.url,
+                    height: 40,
+                },
             },
             {
-                icon: require('../assets/images/skills/ts-js.svg').default as string,
                 name: 'TypeScript, JavaScript',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/ts-js.svg').default.url,
+                    height: 40,
+                },
             },
             {
-                icon: require('../assets/images/skills/magento.svg').default as string,
                 name: 'Magento',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/magento.svg').default.url,
+                    height: 46,
+                },
             },
             {
-                icon: require('../assets/images/skills/react.svg').default as string,
                 name: 'React',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/react.svg').default.url,
+                    height: 36,
+                },
             },
             {
-                icon: require('../assets/images/skills/nette.svg').default as string,
                 name: 'Nette',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/nette.svg').default.url,
+                    height: 26,
+                },
             },
             {
-                icon: require('../assets/images/skills/jquery.svg').default as string,
                 name: 'jQuery',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/jquery.svg').default.url,
+                    height: 42,
+                },
             },
             {
-                icon: require('../assets/images/skills/java.svg').default as string,
                 name: 'Java',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/java.svg').default.url,
+                    height: 54,
+                },
             },
             {
-                icon: require('../assets/images/skills/jest.svg').default as string,
                 name: 'Jest',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/jest.svg').default.url,
+                    height: 44,
+                },
             },
             {
-                icon: require('../assets/images/skills/apache.svg').default as string,
                 name: 'Apache',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/apache.svg').default.url,
+                    height: 64,
+                },
             },
             {
-                icon: require('../assets/images/skills/webpack.svg').default as string,
                 name: 'Webpack',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/webpack.svg').default.url,
+                    height: 45,
+                },
             },
             {
-                icon: require('../assets/images/skills/debian.svg').default as string,
                 name: 'Linux Debian',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/debian.svg').default.url,
+                    height: 50,
+                },
             },
             {
-                icon: require('../assets/images/skills/git.svg').default as string,
                 name: 'Git',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                icon: {
+                    url: require('../assets/images/skills/git.svg').default.url,
+                    height: 40,
+                },
             },
         ]}
     />

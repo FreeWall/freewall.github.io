@@ -12,6 +12,8 @@ export interface GalleryState {
 
 export default class Gallery extends React.Component<{}, GalleryState> {
 
+    private _previewRef = React.createRef<HTMLDivElement>();
+
     constructor(props) {
         super(props);
 
@@ -19,9 +21,6 @@ export default class Gallery extends React.Component<{}, GalleryState> {
             visible: false,
             currentImageIndex: 0,
         };
-
-        this.close = this.close.bind(this);
-        this.changeImage = this.changeImage.bind(this);
     }
 
     close() {
@@ -32,16 +31,52 @@ export default class Gallery extends React.Component<{}, GalleryState> {
 
     componentDidMount(): void {
         document.addEventListener('keydown', this.onKeyDown.bind(this));
+        document.addEventListener('wheel', this.onWhell.bind(this));
     }
 
     componentWillUnmount(): void {
         document.removeEventListener('keydown', this.onKeyDown.bind(this));
+        document.removeEventListener('wheel', this.onWhell.bind(this));
     }
 
-    onKeyDown(e: KeyboardEvent) {
-        if (e.key == 'Escape') {
+    onKeyDown(event: KeyboardEvent) {
+        if (event.key == 'Escape') {
             this.close();
         }
+    }
+
+    onWhell(event: WheelEvent) {
+        if (!this.state.visible) {
+            return;
+        }
+
+        for (let element of event.composedPath()) {
+            if (element == this._previewRef.current) {
+                if (event.deltaY > 0) {
+                    this.nextImage();
+                } else {
+                    this.previousImage();
+                }
+
+                break;
+            }
+        }
+    }
+
+    nextImage() {
+        if (this.state.currentImageIndex >= this.state.images.length - 1) {
+            return;
+        }
+
+        this.changeImage(this.state.currentImageIndex + 1);
+    }
+
+    previousImage() {
+        if (this.state.currentImageIndex < 1) {
+            return;
+        }
+
+        this.changeImage(this.state.currentImageIndex - 1);
     }
 
     changeImage(index) {
@@ -51,19 +86,25 @@ export default class Gallery extends React.Component<{}, GalleryState> {
     }
 
     render() {
+        document.body.className = this.state.visible ? styles.disableScroll : '';
+
         if (!this.state.visible) {
             return null;
         }
-
-        const image = this.state.images[this.state.currentImageIndex];
 
         return (
             <div className={styles.wrapper}>
                 <div className={styles.overlay} onClick={() => this.close()}/>
                 <div className={styles.gallery}>
                     <div className={styles.close} dangerouslySetInnerHTML={{__html: closeIcon}} onClick={() => this.close()}/>
-                    <div className={styles.preview}>
-                        <img src={image.source} alt=""/>
+                    <div className={styles.preview} ref={this._previewRef}>
+                        <div className={styles.slides} data-index={this.state.currentImageIndex}>
+                            {this.state.images.map((image, index) => (
+                                <div className={styles.slide}>
+                                    <img src={image.source} alt=""/>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className={styles.thumbnails}>
                         {this.state.images.map((thumbnail, index) => (
