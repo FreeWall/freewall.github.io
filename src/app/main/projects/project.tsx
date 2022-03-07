@@ -1,5 +1,6 @@
 import styles from './project.less';
 import imagesIcon from '/assets/images/icons/images.inline.svg';
+import SvgSpriteIcon from '../../../common/SvgSpriteIcon';
 
 export interface ProjectImage {
     source: string;

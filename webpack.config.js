@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanCSSPlugin = require('less-plugin-clean-css');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = function (env, argv) {
     let plugins = [
@@ -24,10 +25,11 @@ module.exports = function (env, argv) {
         favicon: './assets/images/favicon.png',
         hash: true,
         minify: {
-            collapseWhitespace: false,
-            preserveLineBreaks: true
+            collapseWhitespace: false
         },
     }));
+
+    plugins.push(new SpriteLoaderPlugin());
 
     let options = {
         entry: './src/index.tsx',
@@ -68,9 +70,9 @@ module.exports = function (env, argv) {
                 },
                 {
                     test: /^(?!.*(\.inline)\.).*\.svg$/,
-                    loader: 'file-loader',
+                    loader: 'svg-sprite-loader',
                     options: {
-                        outputPath: 'assets',
+                        extract: true,
                     }
                 },
                 {
@@ -134,7 +136,7 @@ module.exports = function (env, argv) {
                     ],
                 },
                 {
-                    test: /\.(css|less)$/i,
+                    test: /\.(less)$/i,
                     loader: 'style-resources-loader',
                     options: {
                         patterns: [

@@ -55,15 +55,19 @@ export default class Gallery extends React.Component<{}, GalleryState> {
             return null;
         }
 
-        const image = this.state.images[this.state.currentImageIndex];
-
         return (
             <div className={styles.wrapper}>
                 <div className={styles.overlay} onClick={() => this.close()}/>
                 <div className={styles.gallery}>
                     <div className={styles.close} dangerouslySetInnerHTML={{__html: closeIcon}} onClick={() => this.close()}/>
                     <div className={styles.preview}>
-                        <img src={image.source} alt=""/>
+                        <div className={styles.slides} data-index={this.state.currentImageIndex}>
+                            {this.state.images.map((image, index) => (
+                                <div className={styles.slide}>
+                                    <img src={image.source} alt=""/>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className={styles.thumbnails}>
                         {this.state.images.map((thumbnail, index) => (

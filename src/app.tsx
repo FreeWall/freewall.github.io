@@ -8,7 +8,7 @@ import {SkillProps} from './app/main/skills/skill';
 export interface LinkProps {
     name: string;
     url: string;
-    icon: string;
+    icon;
 }
 
 interface AppProps {
