@@ -1,6 +1,25 @@
 import styles from './hero.less';
 
-export default class Hero extends React.Component<{}, {}> {
+const keywords = [
+    'PHP',
+    'MySQL',
+    'Magento',
+    'TypeScript',
+    'JavaScript',
+    'React',
+    'Nette',
+    'jQuery',
+    'Java',
+    'HTML5',
+    'CSS3, LESS',
+    'Webpack',
+];
+
+export default class Hero extends React.Component<{}, {animation: boolean}> {
+
+    componentDidMount(): void {
+        setTimeout(() => this.setState({animation: true}), 300);
+    }
 
     render() {
         return (
@@ -22,6 +41,11 @@ export default class Hero extends React.Component<{}, {}> {
                                 <span>back-end, návrh a integrace systémů</span>
                             </div>
                         </div>
+                    </div>
+                    <div className={styles.keywords + ' ' + (this.state?.animation ? styles.show : '')}>
+                        {keywords.map((keyword) => (
+                            <div className={styles.keyword + ' ' + styles['keyword-' + keyword.toLowerCase().replace(', ', '')]}>{keyword}</div>
+                        ))}
                     </div>
                 </div>
             </div>
