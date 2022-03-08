@@ -18,7 +18,9 @@ const keywords = [
 export default class Hero extends React.Component<{}, {animation: boolean}> {
 
     componentDidMount(): void {
-        setTimeout(() => this.setState({animation: true}), 300);
+        if (!window.navigator.webdriver) {
+            setTimeout(() => this.setState({animation: true}), 300);
+        }
     }
 
     render() {
