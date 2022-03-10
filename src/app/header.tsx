@@ -1,5 +1,4 @@
 import styles from './header.less';
-import profilephoto from '/assets/images/profilephoto.png';
 import {LinkProps} from '../app';
 
 interface HeaderProps {
@@ -18,7 +17,7 @@ export default class Header extends React.Component<HeaderProps, {}> {
                 <div className={styles.content}>
                     <div className={styles.logo}>
                         <div className={styles.logoImage}>
-                            <img src={profilephoto} alt=""/>
+                            <img src={require('../../assets/images/profilephoto.png?width=256&quality=90').default as string} alt=""/>
                         </div>
                         <div className={styles.logoSplitter}/>
                         <div className={styles.logoText}>

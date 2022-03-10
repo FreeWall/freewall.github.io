@@ -43,27 +43,31 @@ const _App = (
                 technologies: [
                     'PHP', 'MySQL', 'JavaScript', 'jQuery', 'Nette',
                 ],
-                thumbnail: require('../assets/images/projects/shopmaker/screenshot1.png?width=512').default as string,
+                thumbnail: require('../assets/images/projects/shopmaker/screenshot1.png?width=384&format=jpeg&quality=90').default as string,
                 images: [
                     {
-                        source: require('../assets/images/projects/shopmaker/screenshot1.png').default as string,
-                        thumbnail: require('../assets/images/projects/shopmaker/screenshot1.png?width=512').default as string,
+                        source: require('../assets/images/projects/shopmaker/screenshot1.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/screenshot1.png?width=256&format=jpeg&quality=90').default as string,
                     },
                     {
-                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
-                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                        source: require('../assets/images/projects/shopmaker/eshop_product.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/eshop_product.png?width=256&format=jpeg&quality=90').default as string,
                     },
                     {
-                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
-                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                        source: require('../assets/images/projects/shopmaker/admin_prehled.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/admin_prehled.png?width=256&format=jpeg&quality=90').default as string,
                     },
                     {
-                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
-                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                        source: require('../assets/images/projects/shopmaker/admin_objednavky.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/admin_objednavky.png?width=256&format=jpeg&quality=90').default as string,
                     },
                     {
-                        source: require('../assets/images/projects/shopmaker/screenshot2.png').default as string,
-                        thumbnail: require('../assets/images/projects/shopmaker/screenshot2.png?width=512').default as string,
+                        source: require('../assets/images/projects/shopmaker/admin_produkty.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/admin_produkty.png?width=256&format=jpeg&quality=90').default as string,
+                    },
+                    {
+                        source: require('../assets/images/projects/shopmaker/admin_statistiky.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/shopmaker/admin_statistiky.png?width=256&format=jpeg&quality=90').default as string,
                     },
                 ]
             },
@@ -77,6 +81,13 @@ const _App = (
                 technologies: [
                     'Java', 'PHP', 'MySQL', 'JavaScript', 'jQuery',
                 ],
+                thumbnail: require('../assets/images/projects/realcraft/web1.png?width=384&format=jpeg&quality=90').default as string,
+                images: [
+                    {
+                        source: require('../assets/images/projects/realcraft/web1.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/realcraft/web1.png?width=256&format=jpeg&quality=90').default as string,
+                    },
+                ]
             },
             {
                 name: 'Reálný Život',
@@ -87,6 +98,13 @@ const _App = (
                 technologies: [
                     'Pawn', 'PHP', 'MySQL', 'JavaScript', 'jQuery',
                 ],
+                thumbnail: require('../assets/images/projects/realny-zivot/web1.png?width=384&format=jpeg&quality=90').default as string,
+                images: [
+                    {
+                        source: require('../assets/images/projects/realny-zivot/web1.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/realny-zivot/web1.png?width=256&format=jpeg&quality=90').default as string,
+                    },
+                ]
             },
             {
                 name: 'Freelancer',
@@ -104,15 +122,15 @@ const _App = (
                 years: '2009 - 2013',
                 type: 'vzdělání',
                 technologies: [
-                    'PHP', 'MySQL', 'C', 'JavaScript',
+                    'PHP', 'MySQL', 'Java', 'C', 'JavaScript',
                 ],
-                thumbnail: require('../assets/images/projects/spseplzen.png?width=256').default as string,
+                thumbnail: require('../assets/images/projects/spseplzen.png?width=256&quality=90').default as string,
             },
         ]}
         skills={[
             {
                 name: 'PHP',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'PHP 5 - 8, OOP, MVC, REST API, Composer, několik vlastních frameworků, PHPStorm',
                 icon: {
                     url: require('../assets/images/skills/php.svg').default.url,
                     height: 26,
@@ -120,7 +138,7 @@ const _App = (
             },
             {
                 name: 'HTML5, CSS3, LESS',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Kódování a stylování šablon, SEO optimalizace, LESS preprocessor',
                 icon: {
                     url: require('../assets/images/skills/html5.svg').default.url,
                     height: 56,
@@ -128,15 +146,15 @@ const _App = (
             },
             {
                 name: 'MySQL',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'MyISAM, InnoDB, cizí klíče, transakce, zálohování, phpMyAdmin, Adminer',
                 icon: {
                     url: require('../assets/images/skills/mysql.svg').default.url,
                     height: 40,
                 },
             },
             {
-                name: 'TypeScript, JavaScript',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                name: 'TypeScript',
+                description: 'JavaScript ES6, TypeScript 4.0+, Node.js, npm, parametrizované třídy a funkce, declarations.d.ts',
                 icon: {
                     url: require('../assets/images/skills/ts-js.svg').default.url,
                     height: 40,
@@ -144,7 +162,7 @@ const _App = (
             },
             {
                 name: 'Magento',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Magento Community Edition 1.6 - 1.9, implementace PayU brány, vlastní košík, vlastní JS & CSS bundler',
                 icon: {
                     url: require('../assets/images/skills/magento.svg').default.url,
                     height: 46,
@@ -152,7 +170,7 @@ const _App = (
             },
             {
                 name: 'React',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Striktně typované TypeScript componenty (tsx), optimalizace renderování, CSS modules',
                 icon: {
                     url: require('../assets/images/skills/react.svg').default.url,
                     height: 36,
@@ -160,7 +178,7 @@ const _App = (
             },
             {
                 name: 'Nette',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Nette framework, šablony Latte, testovací nástroj Tester, Tracy debug, databázová vrstva Dibi',
                 icon: {
                     url: require('../assets/images/skills/nette.svg').default.url,
                     height: 26,
@@ -168,7 +186,7 @@ const _App = (
             },
             {
                 name: 'jQuery',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Komplexní použití napříč projekty, tvorba vlastních jQuery pluginů',
                 icon: {
                     url: require('../assets/images/skills/jquery.svg').default.url,
                     height: 42,
@@ -176,7 +194,7 @@ const _App = (
             },
             {
                 name: 'Java',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Java SE, IntelliJ IDEA, vývoj Minecraft pluginů Bukkit/Spigot',
                 icon: {
                     url: require('../assets/images/skills/java.svg').default.url,
                     height: 54,
@@ -184,7 +202,7 @@ const _App = (
             },
             {
                 name: 'Jest',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Testování knihoven a React component, testovací knihovna Enzyme, mockování',
                 icon: {
                     url: require('../assets/images/skills/jest.svg').default.url,
                     height: 44,
@@ -192,7 +210,7 @@ const _App = (
             },
             {
                 name: 'Apache',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Automatizace a konfigurace virtualhostů, .htaccess, generování https certifikátů Let\'s Encrypt',
                 icon: {
                     url: require('../assets/images/skills/apache.svg').default.url,
                     height: 64,
@@ -200,7 +218,7 @@ const _App = (
             },
             {
                 name: 'Webpack',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Konfigurace projektů, TypeScript, Babel, React, LESS, CSS modules',
                 icon: {
                     url: require('../assets/images/skills/webpack.svg').default.url,
                     height: 45,
@@ -208,7 +226,7 @@ const _App = (
             },
             {
                 name: 'Linux Debian',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Instalace a správa vlastního Linux serveru, mail server, balíkovací nástroj apt',
                 icon: {
                     url: require('../assets/images/skills/debian.svg').default.url,
                     height: 50,
@@ -216,7 +234,7 @@ const _App = (
             },
             {
                 name: 'Git',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla quam velit, vulputate eu.',
+                description: 'Kolaborace v 10+ členném týmu, code reviews, GitLab, GitHub, BitBucket, vlastní projekty v Gitu',
                 icon: {
                     url: require('../assets/images/skills/git.svg').default.url,
                     height: 40,
