@@ -15,13 +15,7 @@ const keywords = [
     'Webpack',
 ];
 
-export default class Hero extends React.Component<{}, {animation: boolean}> {
-
-    componentDidMount(): void {
-        if (!window.navigator.webdriver) {
-            setTimeout(() => this.setState({animation: true}), 300);
-        }
-    }
+export default class Hero extends React.Component<{}, {}> {
 
     render() {
         return (
@@ -44,7 +38,7 @@ export default class Hero extends React.Component<{}, {animation: boolean}> {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.keywords + ' ' + (this.state?.animation ? styles.show : '')}>
+                    <div className={styles.keywords}>
                         {keywords.map((keyword) => (
                             <div className={styles.keyword + ' ' + styles['keyword-' + keyword.toLowerCase().replace(', ', '')]}>{keyword}</div>
                         ))}
