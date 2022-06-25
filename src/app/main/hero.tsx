@@ -1,18 +1,18 @@
 import styles from './hero.less';
 
 const keywords = [
-    'PHP',
-    'MySQL',
-    'Magento',
     'TypeScript',
-    'JavaScript',
     'React',
-    'Nette',
-    'jQuery',
-    'Java',
     'HTML5',
-    'CSS3, LESS',
+    'Nette',
+    'MySQL',
+    'Java',
     'Webpack',
+    'CSS3, LESS',
+    'PHP',
+    'JavaScript',
+    'jQuery',
+    'Magento',
 ];
 
 export default class Hero extends React.Component<{}, {}> {

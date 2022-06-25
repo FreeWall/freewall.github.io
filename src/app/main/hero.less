@@ -11,19 +11,47 @@
     max-width: @globalWidths[desktop];
     margin: 0px auto;
     padding: 0px 30px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 34px;
+    }
 }
 
 .claim {
     padding: 100px 60px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        padding: 26px 0px;
+    }
 }
 
 .title {
     font-size: 30px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        font-size: 24px;
+
+        span {
+            display: block;
+
+            &:last-child {
+                margin-top: 4px;
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 .items {
     margin-top: 18px;
     margin-left: 10px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
 }
 
 .item {
@@ -40,10 +68,23 @@
         margin-right: 18px;
         border-radius: 50%;
         background: @globalColors[conversion];
+
+        @media (max-width: @globalWidths[mobile]) {
+            width: 8px;
+            height: 8px;
+            margin-right: 16px;
+        }
     }
 
     span {
         vertical-align: middle;
+    }
+
+    @media (max-width: @globalWidths[mobile]) {
+        padding: 3px 0px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.4em;
     }
 }
 
@@ -51,6 +92,14 @@
     position: relative;
     width: 360px;
     height: 300px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        position: static;
+        width: 100%;
+        height: auto;
+        line-height: 2.2em;
+        padding-bottom: 30px;
+    }
 }
 
 .keyword {
@@ -59,8 +108,17 @@
     user-select: none;
     transform: scale(0);
     opacity: 0;
-    animation: showup 0.3s;
+    animation-name: showup;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
+
+    @media (max-width: @globalWidths[mobile]) {
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px !important;;
+        margin-right: 12px;
+    }
 }
 
 @keyframes showup {
@@ -109,9 +167,12 @@
     color: #eb6636;
     font-size: 30px;
     font-weight: 500;
-    animation: showup-rotate 0.3s;
+    animation-name: showup-rotate;
     animation-delay: 0.3s + 0.2s;
-    animation-fill-mode: forwards;
+
+    @media (max-width: @globalWidths[mobile]) {
+        animation-name: showup;
+    }
 }
 
 .keyword-typescript {
@@ -131,6 +192,10 @@
     animation: showup-rotate 0.3s;
     animation-delay: 0.3s + 0.4s;
     animation-fill-mode: forwards;
+
+    @media (max-width: @globalWidths[mobile]) {
+        animation-name: showup;
+    }
 }
 
 .keyword-react {

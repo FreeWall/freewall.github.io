@@ -10,10 +10,14 @@ header {
     max-width: @globalWidths[desktop];
     margin: 0px auto;
     padding: 24px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        padding: 20px;
+    }
 }
 
 .logo {
-
+    white-space: nowrap;
 }
 
 .logoImage {
@@ -24,6 +28,11 @@ header {
         width: 64px;
         height: 64px;
         border-radius: 50%;
+
+        @media (max-width: @globalWidths[mobile]) {
+            width: 54px;
+            height: 54px;
+        }
     }
 }
 
@@ -34,6 +43,11 @@ header {
     height: 60px;
     background: @globalColors[conversion];
     margin: 0px 20px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        margin: 0px 17px;
+        height: 50px;
+    }
 }
 
 .logoText {
@@ -43,21 +57,33 @@ header {
 
     h1 {
         font-size: 24px;
+
+        @media (max-width: @globalWidths[mobile]) {
+            font-size: 20px;
+        }
     }
 }
 
 .subtitle {
     font-size: 18px;
     font-weight: 500;
+
+    @media (max-width: @globalWidths[mobile]) {
+        font-size: 15px;
+    }
 }
 
 .links {
-
+    white-space: nowrap;
 }
 
 .link {
     &:last-child {
         margin-left: 40px;
+
+        @media (max-width: @globalWidths[mobile]) {
+            margin-left: 16px;
+        }
     }
 
     &:hover .linkName {
@@ -72,6 +98,12 @@ header {
     height: 24px;
     margin-right: 12px;
 
+    @media (max-width: @globalWidths[mobile]) {
+        width: 26px;
+        height: 26px;
+        margin-right: 0px;
+    }
+
     path {
         fill: #333333;
     }
@@ -84,4 +116,8 @@ header {
     color: @globalColors[text];
     font-size: 16px;
     font-weight: 500;
+
+    @media (max-width: @globalWidths[mobile]) {
+        display: none;
+    }
 }

@@ -1,18 +1,33 @@
 .skill {
     display: flex;
     box-sizing: border-box;
-    width: 45%;
+    flex: 0 0 45%;
     margin-bottom: 30px;
     padding-right: 80px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        flex: 0 0 100%;
+        padding-right: 0px;
+        margin-bottom: 26px;
+    }
 }
 
 .icon {
     flex: 0 0 40px;
 
+    @media (max-width: @globalWidths[mobile]) {
+        flex: 0 0 36px;
+    }
+
     img {
         width: 40px;
         max-width: 40px;
         overflow: hidden;
+
+        @media (max-width: @globalWidths[mobile]) {
+            width: 36px;
+            max-width: 36px;
+        }
     }
 }
 
@@ -23,9 +38,18 @@
 .name {
     font-size: 20px;
     font-weight: 500;
+
+    @media (max-width: @globalWidths[mobile]) {
+        font-size: 18px;
+    }
 }
 
 .description {
     margin-top: 6px;
     line-height: 1.6em;
+
+    @media (max-width: @globalWidths[mobile]) {
+        margin-top: 4px;
+        font-size: 13px;
+    }
 }
