@@ -30,7 +30,7 @@ const _App = (
                 type: 'spolupráce',
                 description: 'Ateli s.r.o. a její dceřinné společnosti provozují několik ﻿e-commerce ﻿projektů ve 12 zemích evropy ﻿s vlastními sklady, expedicí i logistikou.',
                 technologies: [
-                    'PHP', 'MySQL', 'Magento', 'Redis', 'TypeScript', 'React',
+                    'PHP', 'MySQL', 'Magento', 'Redis', 'TS', 'React',
                 ],
             },
             {

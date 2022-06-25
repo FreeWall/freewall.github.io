@@ -1,5 +1,6 @@
 import styles from './project.less';
 import imagesIcon from '/assets/images/icons/images.inline.svg';
+import externalIcon from '/assets/images/icons/external.inline.svg';
 
 export interface ProjectImage {
     source: string;
@@ -22,7 +23,7 @@ export interface ProjectProps {
 export default class Project extends React.Component<ProjectProps, {}> {
 
     render() {
-        const imagesCountWord: string = this.props.images ? (this.props.images.length > 4 ? 'fotek' : 'fotky') : null;
+        const imagesCountWord: string = this.props.images ? (this.props.images.length > 4 ? 'fotek' : (this.props.images.length == 1 ? 'fotka' : 'fotky')) : null;
 
         return (
             <div className={styles.project}>
@@ -33,8 +34,20 @@ export default class Project extends React.Component<ProjectProps, {}> {
                 <div className={styles.timelineColumn}/>
                 <div className={styles.detailColumn}>
                     <div className={styles.detail}>
-                        <h3>{this.props.name}</h3>
+                        {this.props.url && (
+                            <h3>
+                                <a href={this.props.url} target="_blank">
+                                    {this.props.name}<span className={styles.externalIcon} dangerouslySetInnerHTML={{__html: externalIcon}}/>
+                                </a>
+                            </h3>
+                        ) || (
+                            <h3>{this.props.name}</h3>
+                        )}
                         <h4>{this.props.subtitle}</h4>
+                        <div className={styles.yearsRow}>
+                            <div className={styles.type}>{this.props.type}</div>
+                            <div className={styles.years}>{this.props.years}</div>
+                        </div>
                         <div className={styles.description}>{this.props.description}</div>
                         <div className={styles.technologies}>
                             <div className={styles.label}>Technologie</div>
