@@ -7,13 +7,39 @@ interface HeaderProps {
     links: LinkProps[];
 }
 
-export default class Header extends React.Component<HeaderProps, {}> {
+interface HeaderState {
+    compact: boolean;
+}
+
+export default class Header extends React.Component<HeaderProps, HeaderState> {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            compact: false,
+        };
+    }
+
+    componentDidMount(): void {
+        document.addEventListener('scroll', this.onScroll.bind(this));
+    }
+
+    componentWillUnmount(): void {
+        document.removeEventListener('scroll', this.onScroll.bind(this));
+    }
+
+    onScroll() {
+        this.setState(() => {
+            return {compact: window.scrollY > 10};
+        });
+    }
 
     render() {
         const names = this.props.fullname.split(' ');
 
         return (
-            <header>
+            <header className={this.state.compact ? styles.compact : null}>
                 <div className={styles.content}>
                     <div className={styles.logo}>
                         <div className={styles.logoImage}>

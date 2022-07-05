@@ -1,6 +1,11 @@
 .wrapper {
     width: 100%;
+    padding-top: 112px;
     background: @globalColors[backgroundSlight];
+
+    @media (max-width: @globalWidths[mobile]) {
+        padding-top: 94px;
+    }
 }
 
 .content {
