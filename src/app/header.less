@@ -1,5 +1,12 @@
 header {
+    position: fixed;
     width: 100%;
+    background: @globalColors[backgroundDefault];
+    z-index: 10;
+
+    &.compact {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .content {
@@ -10,9 +17,19 @@ header {
     max-width: @globalWidths[desktop];
     margin: 0px auto;
     padding: 24px;
+    transition: padding 0.2s;
 
     @media (max-width: @globalWidths[mobile]) {
         padding: 20px;
+    }
+}
+
+.compact .content {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    @media (max-width: @globalWidths[mobile]) {
+        padding: 12px;
     }
 }
 
@@ -28,11 +45,19 @@ header {
         width: 64px;
         height: 64px;
         border-radius: 50%;
+        transition: width 0.2s, height 0.2s;
 
         @media (max-width: @globalWidths[mobile]) {
             width: 54px;
             height: 54px;
         }
+    }
+}
+
+.compact .logoImage {
+    img {
+        width: 36px;
+        height: 36px;
     }
 }
 
@@ -43,11 +68,18 @@ header {
     height: 60px;
     background: @globalColors[conversion];
     margin: 0px 20px;
+    transition: height 0.2s;
 
     @media (max-width: @globalWidths[mobile]) {
         margin: 0px 17px;
         height: 50px;
     }
+}
+
+.compact .logoSplitter {
+    width: 3px;
+    height: 32px;
+    margin: 0px 12px;
 }
 
 .logoText {
@@ -70,6 +102,16 @@ header {
 
     @media (max-width: @globalWidths[mobile]) {
         font-size: 15px;
+    }
+}
+
+.compact .logoText {
+    h1 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        display: none;
     }
 }
 
