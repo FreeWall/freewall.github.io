@@ -17,7 +17,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         super(props);
 
         this.state = {
-            compact: false,
+            compact: window.scrollY > 10,
         };
     }
 
@@ -41,7 +41,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         return (
             <header className={this.state.compact ? styles.compact : null}>
                 <div className={styles.content}>
-                    <div className={styles.logo}>
+                    <a href="/" className={styles.logo}>
                         <div className={styles.logoImage}>
                             <img src={require('../../assets/images/profilephoto.png?width=256&quality=90').default as string} alt=""/>
                         </div>
@@ -50,7 +50,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
                             <h1><b>{names[0]}</b> {names[1]}</h1>
                             <div className={styles.subtitle}>{this.props.subtitle}</div>
                         </div>
-                    </div>
+                    </a>
                     <div className={styles.links}>
                         {this.props.links.map((link) => (
                             <a className={styles.link} href={link.url} target="_blank">
