@@ -17,16 +17,20 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         super(props);
 
         this.state = {
-            compact: window.scrollY > 10,
+            compact: false,
         };
+
+        this.onScroll = this.onScroll.bind(this);
     }
 
     componentDidMount(): void {
-        document.addEventListener('scroll', this.onScroll.bind(this));
+        document.addEventListener('scroll', this.onScroll);
+
+        this.onScroll();
     }
 
     componentWillUnmount(): void {
-        document.removeEventListener('scroll', this.onScroll.bind(this));
+        document.removeEventListener('scroll', this.onScroll);
     }
 
     onScroll() {
