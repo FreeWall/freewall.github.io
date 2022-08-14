@@ -115,6 +115,13 @@ const _App = (
                 technologies: [
                     'PHP', 'HTML', 'JavaScript',
                 ],
+                thumbnail: require('../assets/images/projects/freelancer/web1.png?width=384&format=jpeg&quality=90').default as string,
+                images: [
+                    {
+                        source: require('../assets/images/projects/freelancer/web1.png?quality=100').default as string,
+                        thumbnail: require('../assets/images/projects/freelancer/web1.png?width=256&format=jpeg&quality=90').default as string,
+                    },
+                ]
             },
             {
                 name: 'VOŠ a SPŠE Plzeň',
