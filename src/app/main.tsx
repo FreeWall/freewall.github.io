@@ -9,19 +9,16 @@ interface MainProps {
     skills: SkillProps[];
 }
 
-export default class Main extends React.Component<MainProps, {}> {
-
-    render() {
-        return (
-            <main>
-                <Hero/>
-                <Projects
-                    projects={this.props.projects}
-                />
-                <Skills
-                    skills={this.props.skills}
-                />
-            </main>
-        )
-    }
+export default function Main(props: MainProps) {
+    return (
+        <main>
+            <Hero/>
+            <Projects
+                projects={props.projects}
+            />
+            <Skills
+                skills={props.skills}
+            />
+        </main>
+    )
 }

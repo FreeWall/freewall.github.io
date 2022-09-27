@@ -22,30 +22,23 @@ interface AppProps {
     skills: SkillProps[];
 }
 
-export default class App extends React.Component<AppProps, {}> {
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className={styles.container}>
-                <Header
-                    fullname={this.props.author.fullname}
-                    subtitle={this.props.author.label}
-                    links={this.props.links}
-                />
-                <Main
-                    projects={this.props.projects}
-                    skills={this.props.skills}
-                />
-                <Footer
-                    fullname={this.props.author.fullname}
-                    address={this.props.author.address}
-                    links={this.props.links}
-                />
-            </div>
-        )
-    }
+export default function App(props: AppProps) {
+    return (
+        <div className={styles.container}>
+            <Header
+                fullname={props.author.fullname}
+                subtitle={props.author.label}
+                links={props.links}
+            />
+            <Main
+                projects={props.projects}
+                skills={props.skills}
+            />
+            <Footer
+                fullname={props.author.fullname}
+                address={props.author.address}
+                links={props.links}
+            />
+        </div>
+    )
 }
