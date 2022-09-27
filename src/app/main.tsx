@@ -20,5 +20,5 @@ export default function Main(props: MainProps) {
                 skills={props.skills}
             />
         </main>
-    )
+    );
 }

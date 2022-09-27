@@ -9,7 +9,6 @@ interface HeaderProps {
 }
 
 export default function Header(props: HeaderProps) {
-
     const [isCompact, setCompact] = useState<boolean>(false);
 
     const onScroll = () => {
@@ -19,6 +18,10 @@ export default function Header(props: HeaderProps) {
     useEffect(() => {
         document.addEventListener('scroll', onScroll);
         onScroll();
+
+        return () => {
+            document.removeEventListener('scroll', onScroll);
+        };
     }, []);
 
     const names = props.fullname.split(' ');
@@ -45,5 +48,5 @@ export default function Header(props: HeaderProps) {
                 </div>
             </div>
         </header>
-    )
+    );
 }

@@ -40,5 +40,5 @@ export default function App(props: AppProps) {
                 links={props.links}
             />
         </div>
-    )
+    );
 }
