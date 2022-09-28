@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 
 export default function Header(props: HeaderProps) {
-    const [isCompact, setCompact] = useState<boolean>(false);
+    const [isCompact, setCompact] = useState(false);
 
     const onScroll = () => {
         setCompact(window.scrollY > 10);
