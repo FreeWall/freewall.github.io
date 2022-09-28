@@ -1,5 +1,6 @@
 import styles from './header.less';
 import {LinkProps} from '../app';
+import {useEffect, useState} from 'react';
 
 interface HeaderProps {
     fullname: string;
@@ -7,63 +8,45 @@ interface HeaderProps {
     links: LinkProps[];
 }
 
-interface HeaderState {
-    compact: boolean;
-}
+export default function Header(props: HeaderProps) {
+    const [isCompact, setCompact] = useState(false);
 
-export default class Header extends React.Component<HeaderProps, HeaderState> {
+    const onScroll = () => {
+        setCompact(window.scrollY > 10);
+    }
 
-    constructor(props) {
-        super(props);
+    useEffect(() => {
+        document.addEventListener('scroll', onScroll);
+        onScroll();
 
-        this.state = {
-            compact: false,
+        return () => {
+            document.removeEventListener('scroll', onScroll);
         };
+    }, []);
 
-        this.onScroll = this.onScroll.bind(this);
-    }
+    const names = props.fullname.split(' ');
 
-    componentDidMount(): void {
-        document.addEventListener('scroll', this.onScroll);
-
-        this.onScroll();
-    }
-
-    componentWillUnmount(): void {
-        document.removeEventListener('scroll', this.onScroll);
-    }
-
-    onScroll() {
-        this.setState(() => {
-            return {compact: window.scrollY > 10};
-        });
-    }
-
-    render() {
-        const names = this.props.fullname.split(' ');
-
-        return (
-            <header className={this.state.compact ? styles.compact : null}>
-                <div className={styles.content}>
-                    <a href="/" className={styles.logo}>
-                        <div className={styles.logoImage}>
-                            <img src={require('../../assets/images/profilephoto.png?width=256&quality=90').default as string} alt=""/>
-                        </div>
-                        <div className={styles.logoSplitter}/>
-                        <div className={styles.logoText}>
-                            <h1><b>{names[0]}</b> {names[1]}</h1>
-                            <div className={styles.subtitle}>{this.props.subtitle}</div>
-                        </div>
-                    </a>
-                    <div className={styles.links}>
-                        {this.props.links.map((link) => (
-                            <a className={styles.link} href={link.url} target="_blank">
-                                <span className={styles.linkIcon} dangerouslySetInnerHTML={{__html: link.icon}}/><span className={styles.linkName}>{link.name}</span>
-                            </a>
-                        ))}
+    return (
+        <header className={isCompact ? styles.compact : null}>
+            <div className={styles.content}>
+                <a href="/" className={styles.logo}>
+                    <div className={styles.logoImage}>
+                        <img src={require('../../assets/images/profilephoto.png?width=256&quality=90').default as string} alt=""/>
                     </div>
+                    <div className={styles.logoSplitter}/>
+                    <div className={styles.logoText}>
+                        <h1><b>{names[0]}</b> {names[1]}</h1>
+                        <div className={styles.subtitle}>{props.subtitle}</div>
+                    </div>
+                </a>
+                <div className={styles.links}>
+                    {props.links.map((link) => (
+                        <a className={styles.link} href={link.url} target="_blank">
+                            <span className={styles.linkIcon} dangerouslySetInnerHTML={{__html: link.icon}}/><span className={styles.linkName}>{link.name}</span>
+                        </a>
+                    ))}
                 </div>
-            </header>
-        )
-    }
+            </div>
+        </header>
+    );
 }
