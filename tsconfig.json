@@ -1,31 +1,25 @@
 {
   "compilerOptions": {
-    "noImplicitAny": false,
-    "sourceMap": true,
-    "module": "es6",
-    "target": "es5",
-    "jsx": "react",
+    "target": "es2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "esModuleInterop": true,
-    "lib": [
-        "es5",
-        "es6",
-        "dom",
-        "es2015"
-    ],
-    "typeRoots": [
-        "/node_modules/@types"
-    ],
-    "types": [
-      "webpack-env",
-      "react",
-      "react-dom"
-    ]
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "files": [
-    "./declarations.d.ts"
-  ],
-  "exclude": ["**/*"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
+  "exclude": ["node_modules"]
 }
