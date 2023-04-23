@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-main text-body antialiased;
+}
+
+#__next {
+  height: 100%;
+}
+
+@layer components {
+  .wrapper {
+    @apply mx-auto max-w-pc px-11;
+  }
+}

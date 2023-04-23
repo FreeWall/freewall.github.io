@@ -1,5 +1,8 @@
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
+import Hero from './hero';
+import Projects from './projects';
+import Skills from './skills';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -9,7 +12,9 @@ export default function Home() {
       <Head>
         <title>Michal Vaněk | web developer</title>
       </Head>
-      <div className="font-bold">home page {t('hello-key')}</div>
+      <Hero />
+      <Projects />
+      <Skills />
     </>
   );
 }
