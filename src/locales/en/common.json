@@ -1,1 +1,7 @@
-{ "experience": "Experience", "skills": "Skills" }
+{
+  "home-hero-heading": "I code, therefore I am",
+  "home-years-experience": "years experience",
+  "home-finished-projects": "finished projects",
+  "home-experience": "Experience",
+  "home-skills": "Skills"
+}

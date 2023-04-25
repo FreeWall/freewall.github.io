@@ -7,7 +7,7 @@ export default function Skills() {
     <div className="">
       <div className="wrapper py-16">
         <h2 className="text-3xl font-semibold text-hightlight">
-          {t('skills')}
+          {t('home-skills')}
         </h2>
       </div>
     </div>

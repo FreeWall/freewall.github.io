@@ -7,7 +7,7 @@ export default function Projects() {
     <div className="bg-secondary">
       <div className="wrapper py-16">
         <h2 className="text-3xl font-semibold text-hightlight">
-          {t('experience')}
+          {t('home-experience')}
         </h2>
       </div>
     </div>

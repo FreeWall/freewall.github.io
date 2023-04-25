@@ -1,1 +1,7 @@
-{ "experience": "Zkušenosti", "skills": "Dovednosti" }
+{
+  "home-hero-heading": "Programuji, tedy jsem",
+  "home-years-experience": "let zkušeností",
+  "home-finished-projects": "dokončených projektů",
+  "home-experience": "Zkušenosti",
+  "home-skills": "Dovednosti"
+}
