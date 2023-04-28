@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps = async (ctx: any) => {
     props: {
       locales,
       ...(await serverSideTranslations(
-        ctx.params.locale ?? nextI18NextConfig.i18n.defaultLocale,
+        ctx.params?.locale ?? nextI18NextConfig.i18n.defaultLocale,
         ['common'],
       )),
     },

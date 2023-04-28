@@ -6,7 +6,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="wrapper mt-10 px-0">
+      <div className="wrapper mt-8 px-0">
         <div className="flex items-end">
           <Image
             src="/images/profilephoto-hero.png"

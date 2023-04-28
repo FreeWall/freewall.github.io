@@ -24,11 +24,19 @@ export default function Header() {
 
   return (
     <header
-      className={classNames('fixed w-full', {
-        'shadow-md': isCompact,
+      className={classNames('fixed w-full bg-main', {
+        'shadow-header': isCompact,
       })}
     >
-      <div className="wrapper flex w-full items-center justify-between py-11">
+      <div
+        className={classNames(
+          'wrapper flex w-full items-center justify-between transition-[padding]',
+          {
+            'py-4': isCompact,
+            'py-11': !isCompact,
+          },
+        )}
+      >
         <div className="flex items-center">
           <Link href="/">
             <a className="text-2xl">
@@ -39,7 +47,7 @@ export default function Header() {
           <div className="mx-5 h-[22px] w-1 bg-conversion"></div>
           <div className="text-xl">{author.label}</div>
         </div>
-        <div className="flex items-center space-x-10">
+        <div className="flex items-center space-x-10 text-base font-medium">
           {links.map((link, idx) => (
             <Link
               key={idx}
@@ -53,7 +61,7 @@ export default function Header() {
                   className="text-hightlight"
                   size={24}
                 />
-                <span className="ml-3 py-1 text-base">{link.name}</span>
+                <span className="ml-3 py-1">{link.name}</span>
               </a>
             </Link>
           ))}

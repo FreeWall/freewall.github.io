@@ -1,6 +1,24 @@
 import { createContext, ReactNode, useContext } from 'react';
-import { FaGithub, FaRegEnvelope } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
+import { appContextData } from './app.data';
+
+export interface ProjectImage {
+  source: string;
+  thumbnail: string;
+}
+
+export interface ProjectProps {
+  name: string;
+  subtitle: string;
+  years: string;
+  type: string;
+  url?: string;
+  description?: string;
+  technologies?: string[];
+  thumbnail?: string;
+  images?: ProjectImage[];
+  onGalleryClick?: () => void;
+}
 
 export interface AppContextProps {
   author: {
@@ -13,35 +31,14 @@ export interface AppContextProps {
     url: string;
     icon: IconType;
   }[];
+  projects: ProjectProps[];
 }
-
-const defaultProps: AppContextProps = {
-  author: {
-    fullname: 'Michal Vaněk',
-    label: '<web developer/>',
-    address: ['Česká Bříza 87, 330 11 Plzeň', 'IČ: 03540430'],
-  },
-  links: [
-    {
-      name: 'info@michalvanek.cz',
-      url: 'mailto:info@michalvanek.cz',
-      icon: FaRegEnvelope,
-    },
-    {
-      name: 'FreeWall',
-      url: 'https://github.com/FreeWall',
-      icon: FaGithub,
-    },
-  ],
-};
 
 export function useApp() {
   return useContext(AppContext);
 }
 
-export const AppContext = createContext<AppContextProps>({
-  ...defaultProps,
-});
+export const AppContext = createContext<AppContextProps>(appContextData);
 
 export function AppProvider(props: {
   props: AppContextProps;
@@ -49,9 +46,7 @@ export function AppProvider(props: {
 }) {
   if (!props.props) {
     props = {
-      props: {
-        ...defaultProps,
-      },
+      props: appContextData,
       children: props.children,
     };
   }
