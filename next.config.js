@@ -39,6 +39,10 @@ module.exports = function next(stage) {
           test: /\.svg$/,
           use: ['@svgr/webpack'],
         });
+        config.module.rules.push({
+          test: /\.ttf$/,
+          type: 'asset/resource',
+        });
         config.experiments.topLevelAwait = true;
         return config;
       },
