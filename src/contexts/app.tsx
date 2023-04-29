@@ -25,6 +25,9 @@ export interface AppContextProps {
     fullname: string;
     label: string;
     address: string[];
+    email: string;
+    phone: string;
+    city: string;
   };
   links: {
     name: string;
@@ -50,6 +53,7 @@ export function AppProvider(props: {
       children: props.children,
     };
   }
+
   return (
     <AppContext.Provider value={{ ...props.props }}>
       {props.children}

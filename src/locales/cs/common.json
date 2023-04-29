@@ -1,7 +1,9 @@
 {
-  "home-hero-heading": "Programuji, tedy jsem",
-  "home-years-experience": "let zkušeností",
-  "home-finished-projects": "dokončených projektů",
-  "home-experience": "Zkušenosti",
-  "home-skills": "Dovednosti"
+  "hero-heading": "Programuji, tedy jsem",
+  "years-experience": "let zkušeností",
+  "finished-projects": "dokončených projektů",
+  "experience": "Zkušenosti",
+  "skills": "Dovednosti",
+  "contact": "Kontakt",
+  "education": "Vzdělání"
 }

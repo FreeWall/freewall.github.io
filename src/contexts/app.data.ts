@@ -6,6 +6,9 @@ export const appContextData: AppContextProps = {
     fullname: 'Michal Vaněk',
     label: '<web developer/>',
     address: ['Česká Bříza 87, 330 11 Plzeň', 'IČ: 03540430'],
+    email: 'info@michalvanek.cz',
+    phone: '+420 605 574 983',
+    city: 'Plzeň',
   },
   links: [
     {

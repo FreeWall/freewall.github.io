@@ -10,7 +10,7 @@ export default function Projects() {
     <div className="bg-secondary">
       <div className="wrapper py-16">
         <h2 className="text-3xl font-semibold text-hightlight">
-          {t('home-experience')}
+          {t('experience')}
         </h2>
         <div>
           {projects.map((project, idx) => (

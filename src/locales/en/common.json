@@ -1,7 +1,9 @@
 {
-  "home-hero-heading": "I code, therefore I am",
-  "home-years-experience": "years experience",
-  "home-finished-projects": "finished projects",
-  "home-experience": "Experience",
-  "home-skills": "Skills"
+  "hero-heading": "I code, therefore I am",
+  "years-experience": "years experience",
+  "finished-projects": "finished projects",
+  "experience": "Experience",
+  "skills": "Skills",
+  "contact": "Contact",
+  "education": "Education"
 }
