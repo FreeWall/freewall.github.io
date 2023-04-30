@@ -19,14 +19,14 @@ export const getStaticPaths: GetStaticPaths = () => ({
   })),
 });
 
-export const getStaticProps: GetStaticProps = async (ctx: any) => {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const { locales } = nextI18NextConfig.i18n;
 
   return {
     props: {
       locales,
       ...(await serverSideTranslations(
-        ctx.params?.locale ?? nextI18NextConfig.i18n.defaultLocale,
+        (ctx.params?.locale as string) ?? nextI18NextConfig.i18n.defaultLocale,
         ['common'],
       )),
     },

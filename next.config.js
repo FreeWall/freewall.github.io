@@ -22,9 +22,10 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 module.exports = function next(stage) {
   return withBundleAnalyzer(
     defineNextConfig({
-      distDir: stage == PHASE_DEVELOPMENT_SERVER ? '.next' : 'build',
+      distDir: '_next',
+      assetPrefix: './',
       reactStrictMode: false,
-      swcMinify: true,
+      swcMinify: false,
       images: {
         domains: (process.env.IMAGE_DOMAINS ?? '')
           .split(',')
@@ -41,6 +42,10 @@ module.exports = function next(stage) {
         });
         config.module.rules.push({
           test: /\.ttf$/,
+          type: 'asset/resource',
+        });
+        config.module.rules.push({
+          test: /\.png$/,
           type: 'asset/resource',
         });
         config.experiments.topLevelAwait = true;

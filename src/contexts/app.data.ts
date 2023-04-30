@@ -24,9 +24,18 @@ export const appContextData: AppContextProps = {
   ],
   projects: [
     {
+      name: 'Goodform AG',
+      subtitle: 'Full-stack developer',
+      years: '2022 - 2023',
+      type: 'spolupráce',
+      description:
+        'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
+      technologies: ['PHP', 'MySQL', 'Magento', 'Redis', 'TS', 'React'],
+    },
+    {
       name: 'AITI Software',
       subtitle: 'Senior developer v AITI Software s.r.o.',
-      years: '2019 - 2022',
+      years: '2019 - 2023',
       type: 'spolupráce',
       description:
         'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',

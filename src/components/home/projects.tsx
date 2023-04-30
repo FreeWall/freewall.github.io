@@ -1,6 +1,5 @@
 import { ProjectProps, useApp } from '@/contexts/app';
 import { useTranslation } from 'next-i18next';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function Projects() {
   const { t } = useTranslation('common');
@@ -26,7 +25,8 @@ export default function Projects() {
 }
 
 function Project(props: ProjectProps) {
-  return (
+  return null;
+  /* return (
     <div>
       <div>
         <div>{props.years}</div>
@@ -84,5 +84,5 @@ function Project(props: ProjectProps) {
         )}
       </div>
     </div>
-  );
+  ); */
 }
