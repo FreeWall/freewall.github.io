@@ -2,7 +2,7 @@ import { useApp } from '@/contexts/app';
 import { Image as Img, Path, Svg, Text, View } from '@react-pdf/renderer';
 import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
-import image from './../../../public/images/profilephoto-nature.inline.png';
+import image from '../../../public/images/profilephoto-nature.png';
 
 export default function Sidebar({
   t,
@@ -13,12 +13,10 @@ export default function Sidebar({
 }) {
   const { author } = useApp();
 
-  console.log(image);
-
   return (
     <View style={tw('bg-[#e8eef2] w-[29.2%] py-10')}>
       <Img
-        src={image as any}
+        source={image}
         style={tw('rounded-full mx-auto -rotate-[4] w-[67%] mb-9')}
       />
 

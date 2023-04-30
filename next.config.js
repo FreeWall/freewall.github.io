@@ -23,10 +23,13 @@ module.exports = function next(stage) {
   return withBundleAnalyzer(
     defineNextConfig({
       distDir: '_next',
+      output: '.build',
       assetPrefix: './',
       reactStrictMode: false,
       swcMinify: false,
       images: {
+        disableStaticImages: true,
+        unoptimized: true,
         domains: (process.env.IMAGE_DOMAINS ?? '')
           .split(',')
           .map((s) => s.trim()),
@@ -46,7 +49,7 @@ module.exports = function next(stage) {
         });
         config.module.rules.push({
           test: /\.png$/,
-          type: 'asset/resource',
+          type: 'asset',
         });
         config.experiments.topLevelAwait = true;
         return config;
