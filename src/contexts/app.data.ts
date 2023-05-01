@@ -96,22 +96,6 @@ export const appContextData: AppContextProps = {
       ],
     },
     {
-      name: 'Reálný Život',
-      subtitle: 'Herní portál GTA: San Andreas serveru',
-      years: '2008 - 2015',
-      type: 'vlastní projekt',
-      description:
-        'Provoz a vývoj webu a herního módu, obchodní model mikrotransakce, spolupráce ve 20+ členném týmu.',
-      technologies: ['Pawn', 'PHP', 'MySQL', 'JavaScript', 'jQuery'],
-      thumbnail: '/images/projects/realny-zivot/web1.png',
-      images: [
-        {
-          source: '/images/projects/realny-zivot/web1.png',
-          thumbnail: '/images/projects/realny-zivot/web1.png',
-        },
-      ],
-    },
-    {
       name: 'Freelancer',
       subtitle: 'Na volné noze v tvorbě webů na zakázku',
       years: '2013 - 2014',
@@ -124,6 +108,22 @@ export const appContextData: AppContextProps = {
         {
           source: '/images/projects/freelancer/web1.png',
           thumbnail: '/images/projects/freelancer/web1.png',
+        },
+      ],
+    },
+    {
+      name: 'Reálný Život',
+      subtitle: 'Herní portál GTA: San Andreas serveru',
+      years: '2008 - 2015',
+      type: 'vlastní projekt',
+      description:
+        'Provoz a vývoj webu a herního módu, obchodní model mikrotransakce, spolupráce ve 20+ členném týmu.',
+      technologies: ['Pawn', 'PHP', 'MySQL', 'JavaScript', 'jQuery'],
+      thumbnail: '/images/projects/realny-zivot/web1.png',
+      images: [
+        {
+          source: '/images/projects/realny-zivot/web1.png',
+          thumbnail: '/images/projects/realny-zivot/web1.png',
         },
       ],
     },

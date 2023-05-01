@@ -45,7 +45,7 @@ export default function Header() {
             </a>
           </Link>
           <div className="mx-5 h-[22px] w-1 bg-conversion"></div>
-          <div className="text-xl">{author.label}</div>
+          <div className="text-[20px]">{author.label}</div>
         </div>
         <div className="flex items-center space-x-10 text-base font-medium">
           {links.map((link, idx) => (

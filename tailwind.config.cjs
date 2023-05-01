@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
+        '2xs': '11px',
+        xs: '13px',
         base: '15px',
+        lg: '17px',
+        xl: '22px',
       },
       spacing: {
         pc: '1140px',
