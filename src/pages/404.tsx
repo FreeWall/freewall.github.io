@@ -1,14 +1,19 @@
 import { useLocaleRedirect } from '@/hooks/useLocaleRedirect';
+import { useTranslation } from 'next-i18next';
 
 export default function Index() {
   useLocaleRedirect();
 
+  const { t } = useTranslation('common');
+
   return (
-    <div className="wrapper flex h-full flex-col items-center justify-center pb-12 pt-8">
-      <span className="pointer-events-none select-none text-[400px] font-bold leading-none opacity-20">
+    <div className="wrapper flex h-full flex-col items-center justify-center">
+      <span className="pointer-events-none select-none text-[400px] font-bold leading-none text-secondary">
         404
       </span>
-      <span className="absolute text-4xl font-bold">Page not found</span>
+      <span className="absolute text-4xl font-semibold">
+        {t('page-not-found')}
+      </span>
     </div>
   );
 }
