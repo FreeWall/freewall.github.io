@@ -23,8 +23,8 @@ module.exports = function next(stage) {
   return withBundleAnalyzer(
     defineNextConfig({
       distDir: '_next',
-      output: '.build',
-      assetPrefix: './',
+      output: 'standalone',
+      assetPrefix: stage == PHASE_DEVELOPMENT_SERVER ? undefined : './',
       reactStrictMode: false,
       swcMinify: false,
       images: {

@@ -5,7 +5,7 @@
 /.next
 /_next
 /build
-/public/cv/*.pdf
+/public/cv/*/*.pdf
 next-env.d.ts
 
 # local env files
