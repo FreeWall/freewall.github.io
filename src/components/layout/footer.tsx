@@ -9,7 +9,7 @@ export default function Footer() {
   const { author, links } = useApp();
 
   return (
-    <footer className="bg-secondary">
+    <footer className="mt-auto bg-secondary">
       <div className="wrapper flex w-full items-center justify-between py-8">
         <div className="text-sm leading-6">
           <div className="font-medium text-hightlight">{author.fullname}</div>

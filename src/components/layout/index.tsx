@@ -7,9 +7,9 @@ interface LayoutProps extends React.PropsWithChildren {
 
 export default function Layout(props: LayoutProps) {
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="h-full pt-[120px]">{props.children}</main>
+      <main className="my-auto pt-[120px]">{props.children}</main>
       <Footer />
     </div>
   );

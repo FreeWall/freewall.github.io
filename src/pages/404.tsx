@@ -7,7 +7,7 @@ export default function Index() {
   const { t } = useTranslation('common');
 
   return (
-    <div className="wrapper flex h-full flex-col items-center justify-center">
+    <div className="wrapper flex flex-col items-center justify-center">
       <span className="pointer-events-none select-none text-[400px] font-bold leading-none text-secondary">
         404
       </span>

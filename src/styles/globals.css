@@ -5,7 +5,11 @@
 html,
 body {
   font-family: 'Inter', sans-serif;
-  @apply h-full bg-main text-body antialiased;
+  @apply bg-main text-body antialiased;
+}
+
+body {
+  @apply overflow-y-scroll;
 }
 
 #__next {
