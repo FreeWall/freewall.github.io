@@ -1,8 +1,11 @@
 import { useApp } from '@/contexts/app';
+import { saveAs } from 'file-saver';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { GrDocumentPdf } from 'react-icons/gr';
 
 export default function Footer() {
+  const { i18n } = useTranslation();
   const { author, links } = useApp();
 
   return (
@@ -17,10 +20,11 @@ export default function Footer() {
         </div>
         <div className="flex items-center space-x-10 text-base font-medium">
           <a
+            href={'/cv/' + i18n.language + '/michalvanek.pdf'}
             className="flex cursor-pointer items-center hover:text-hightlight"
             onClick={(e) => {
               e.preventDefault();
-              alert('click');
+              saveAs('/cv/' + i18n.language + '.pdf', 'michalvanek.pdf');
             }}
           >
             <GrDocumentPdf

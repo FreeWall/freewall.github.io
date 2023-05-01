@@ -48,7 +48,7 @@ module.exports = function next(stage) {
           type: 'asset/resource',
         });
         config.module.rules.push({
-          test: /\.png$/,
+          test: /\.jpg$/,
           type: 'asset',
         });
         config.experiments.topLevelAwait = true;

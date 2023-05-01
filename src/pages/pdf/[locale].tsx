@@ -57,7 +57,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     </I18nextProvider>,
   );
 
-  fs.writeFileSync('public/cv/' + ctx.params?.locale + '.pdf', buffer);
+  fs.writeFileSync(
+    'public/cv/' + ctx.params?.locale + '/michalvanek.pdf',
+    buffer,
+  );
 
   return {
     props: {
