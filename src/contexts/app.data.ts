@@ -30,7 +30,7 @@ export const appContextData: AppContextProps = {
       type: 'spolupráce',
       description:
         'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
-      technologies: ['PHP', 'MySQL', 'Magento', 'Redis', 'TS', 'React'],
+      technologies: ['Magento', 'TS', 'React', 'Next.js'],
     },
     {
       name: 'AITI Software',
@@ -49,7 +49,7 @@ export const appContextData: AppContextProps = {
       url: 'https://www.shopmaker.cz/',
       description:
         'Provoz a vývoj e-shopového portálu - vlastní e-shop na pár kliknutí. Správa objednávek, skladová evidence, podrobné statistiky, napojení na služby třetích stran, 50+ klientů.',
-      technologies: ['PHP', 'MySQL', 'JavaScript', 'jQuery', 'Nette'],
+      technologies: ['PHP', 'MySQL', 'JS', 'jQuery', 'Nette'],
       thumbnail: '/images/projects/shopmaker/screenshot1.png',
       images: [
         {
@@ -86,7 +86,7 @@ export const appContextData: AppContextProps = {
       url: 'https://www.realcraft.cz/',
       description:
         'Provoz a vývoj webu a herních pluginů, obchodní model mikrotransakce, spolupráce v 10+ členném týmu.',
-      technologies: ['Java', 'PHP', 'MySQL', 'JavaScript', 'jQuery'],
+      technologies: ['Java', 'PHP', 'MySQL', 'JS', 'jQuery'],
       thumbnail: '/images/projects/realcraft/web1.png',
       images: [
         {
@@ -102,7 +102,7 @@ export const appContextData: AppContextProps = {
       type: 'spolupráce',
       description:
         'Dokončeno přes 15 projektů - kódování grafických návrhů, úpravy stávajících stránek.',
-      technologies: ['PHP', 'HTML', 'JavaScript'],
+      technologies: ['PHP', 'HTML', 'JS'],
       thumbnail: '/images/projects/freelancer/web1.png',
       images: [
         {
@@ -118,7 +118,7 @@ export const appContextData: AppContextProps = {
       type: 'vlastní projekt',
       description:
         'Provoz a vývoj webu a herního módu, obchodní model mikrotransakce, spolupráce ve 20+ členném týmu.',
-      technologies: ['Pawn', 'PHP', 'MySQL', 'JavaScript', 'jQuery'],
+      technologies: ['Pawn', 'PHP', 'MySQL', 'JS', 'jQuery'],
       thumbnail: '/images/projects/realny-zivot/web1.png',
       images: [
         {
@@ -132,7 +132,7 @@ export const appContextData: AppContextProps = {
       subtitle: 'Správa počítačových sítí',
       years: '2009 - 2013',
       type: 'vzdělání',
-      technologies: ['PHP', 'MySQL', 'Java', 'C', 'JavaScript'],
+      technologies: ['PHP', 'MySQL', 'Java', 'C', 'JS'],
       thumbnail: '/images/projects/spseplzen.png',
     },
   ],

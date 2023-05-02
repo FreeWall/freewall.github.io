@@ -2,6 +2,22 @@ import { createContext, ReactNode, useContext } from 'react';
 import { IconType } from 'react-icons/lib';
 import { appContextData } from './app.data';
 
+export type Technology =
+  | 'PHP'
+  | 'MySQL'
+  | 'Magento'
+  | 'Redis'
+  | 'JS'
+  | 'TS'
+  | 'React'
+  | 'Next.js'
+  | 'Java'
+  | 'jQuery'
+  | 'Nette'
+  | 'Pawn'
+  | 'HTML'
+  | 'C';
+
 export interface ProjectImage {
   source: string;
   thumbnail: string;
@@ -14,9 +30,9 @@ export interface ProjectProps {
   type: string;
   url?: string;
   description?: string;
-  technologies?: string[];
+  technologies?: Technology[];
   thumbnail?: string;
-  images?: ProjectImage[];
+  images?: { source: string; thumbnail: string }[];
   onGalleryClick?: () => void;
 }
 

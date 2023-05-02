@@ -1,6 +1,23 @@
-import { useApp } from '@/contexts/app';
+import { Technology, useApp } from '@/contexts/app';
 import { useTranslation } from 'next-i18next';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+
+const technologyColor: Record<Technology, string> = {
+  PHP: '#7377ad',
+  MySQL: '#507e9c',
+  Magento: '#eb6636',
+  Redis: '#d12b1f',
+  JS: '#efd81d',
+  TS: '#2f74c0',
+  React: '#61dafb',
+  'Next.js': '#ffffff',
+  Java: '#e51f24',
+  jQuery: '#0865a6',
+  Nette: '#3280cb',
+  Pawn: '#a37c31',
+  HTML: '#dd4b25',
+  C: '#005697',
+};
 
 export default function Projects() {
   const { t } = useTranslation('common');
@@ -22,7 +39,7 @@ export default function Projects() {
                 <div className="mb-1.5 text-lg font-medium">
                   {project.years}
                 </div>
-                <div className="mb-5 rounded-[2px] bg-main px-2 py-1.5 text-2xs font-medium uppercase ">
+                <div className="rounded-[3px] bg-main px-2 py-1.5 text-2xs font-medium uppercase">
                   {project.type}
                 </div>
               </div>
@@ -54,11 +71,19 @@ export default function Projects() {
                   <p className="mt-5 max-w-lg text-base">
                     {project.description}
                   </p>
-                  <div className="mt-5 hidden text-base">
-                    <div>Technologie</div>
-                    <div>
-                      {project.technologies.map((technology) => (
-                        <div>{technology}</div>
+                  <div className="mt-5">
+                    <div className="mb-2 text-xs font-medium uppercase">
+                      Technologie
+                    </div>
+                    <div className="flex space-x-2">
+                      {project.technologies?.map((technology, idx) => (
+                        <div
+                          key={idx}
+                          className="rounded-[3px] bg-main px-2.5 py-1.5 text-xs font-semibold"
+                          style={{ color: technologyColor[technology] }}
+                        >
+                          {technology}
+                        </div>
                       ))}
                     </div>
                   </div>
