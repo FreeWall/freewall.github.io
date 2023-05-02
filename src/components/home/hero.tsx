@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="wrapper mt-8 px-0">
         <div className="flex items-end">
           <Image
-            src="/images/profilephoto-hero.png"
+            src="/images/profilephoto-hero.webp"
             width={330}
             height={300}
             quality={100}
