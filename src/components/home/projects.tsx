@@ -3,20 +3,20 @@ import { useTranslation } from 'next-i18next';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const technologyColor: Record<Technology, string> = {
-  PHP: '#7377ad',
-  MySQL: '#507e9c',
+  PHP: '#8b90d1',
+  MySQL: '#5a8cae',
   Magento: '#eb6636',
   Redis: '#d12b1f',
   JS: '#efd81d',
-  TS: '#2f74c0',
+  TS: '#388ae4',
   React: '#61dafb',
   'Next.js': '#ffffff',
   Java: '#e51f24',
-  jQuery: '#0865a6',
-  Nette: '#3280cb',
-  Pawn: '#a37c31',
+  jQuery: '#0a7bca',
+  Nette: '#368bdd',
+  Pawn: '#c7983c',
   HTML: '#dd4b25',
-  C: '#005697',
+  C: '#006bbb',
 };
 
 export default function Projects() {
