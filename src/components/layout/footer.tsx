@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { GrDocumentPdf } from 'react-icons/gr';
 
 export default function Footer() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
   const { author, links } = useApp();
 
   return (
@@ -34,7 +34,7 @@ export default function Footer() {
               className="forceStroke text-hightlight"
               size={22}
             />
-            <span className="ml-3 py-1">Životopis</span>
+            <span className="ml-3 py-1">{t('resume')}</span>
           </a>
           {links.map((link, idx) => (
             <Link

@@ -1,6 +1,5 @@
 const NextBundleAnalyzer = require('@next/bundle-analyzer');
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants.js');
-const { i18n } = require('./next-i18next.config.js');
 
 /**
  * @template {import('next').NextConfig} T
@@ -34,7 +33,6 @@ module.exports = function next(stage) {
           .split(',')
           .map((s) => s.trim()),
       },
-      //i18n,
       experimental: {
         fallbackNodePolyfills: false,
       },

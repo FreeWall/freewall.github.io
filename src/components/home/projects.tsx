@@ -1,4 +1,5 @@
 import { Technology, useApp } from '@/contexts/app';
+import { i18nextLocale } from '@/utils/i18next';
 import { useTranslation } from 'next-i18next';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -20,7 +21,7 @@ const technologyColor: Record<Technology, string> = {
 };
 
 export default function Projects() {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const { projects } = useApp();
 
   return (
@@ -40,7 +41,7 @@ export default function Projects() {
                   {project.years}
                 </div>
                 <div className="rounded-[3px] bg-main px-2 py-1.5 text-2xs font-medium uppercase">
-                  {project.type}
+                  {project.type[i18n.language as i18nextLocale]}
                 </div>
               </div>
               <div className="relative ml-7 mr-10">
@@ -66,14 +67,16 @@ export default function Projects() {
                       project.name}
                   </h3>
                   <h4 className="mt-1.5 text-lg font-medium text-[#dddddd]">
-                    {project.subtitle}
+                    {project.subtitle[i18n.language as i18nextLocale]}
                   </h4>
-                  <p className="mt-5 max-w-lg text-base">
-                    {project.description}
-                  </p>
+                  {project.description?.[i18n.language as i18nextLocale] && (
+                    <p className="mt-5 max-w-lg text-base">
+                      {project.description?.[i18n.language as i18nextLocale]}
+                    </p>
+                  )}
                   <div className="mt-5">
                     <div className="mb-2 text-xs font-medium uppercase">
-                      Technologie
+                      {t('technologies')}
                     </div>
                     <div className="flex space-x-2">
                       {project.technologies?.map((technology, idx) => (

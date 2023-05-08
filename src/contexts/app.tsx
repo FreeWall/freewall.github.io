@@ -1,3 +1,4 @@
+import { i18nextLocale } from '@/utils/i18next';
 import { createContext, ReactNode, useContext } from 'react';
 import { IconType } from 'react-icons/lib';
 import { appContextData } from './app.data';
@@ -25,11 +26,11 @@ export interface ProjectImage {
 
 export interface ProjectProps {
   name: string;
-  subtitle: string;
+  subtitle: Record<i18nextLocale, string>;
   years: string;
-  type: string;
+  type: Record<i18nextLocale, string>;
   url?: string;
-  description?: string;
+  description?: Record<i18nextLocale, string>;
   technologies?: Technology[];
   thumbnail?: string;
   images?: { source: string; thumbnail: string }[];

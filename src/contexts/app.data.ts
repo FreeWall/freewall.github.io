@@ -25,30 +25,43 @@ export const appContextData: AppContextProps = {
   projects: [
     {
       name: 'Goodform AG',
-      subtitle: 'Full-stack developer',
+      subtitle: { cs: 'Full-stack developer', en: 'Full-stack developer' },
       years: '2022 - 2023',
-      type: 'spolupráce',
-      description:
-        'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
+      type: { cs: 'spolupráce', en: 'cooperation' },
+      url: 'https://www.goodform.de',
+      description: {
+        cs: 'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
+        en: '',
+      },
       technologies: ['Magento', 'TS', 'React', 'Next.js'],
     },
     {
       name: 'AITI Software',
-      subtitle: 'Senior developer v AITI Software s.r.o.',
+      subtitle: {
+        cs: 'Senior developer v AITI Software s.r.o.',
+        en: 'Senior developer in AITI Software s.r.o.',
+      },
       years: '2019 - 2023',
-      type: 'spolupráce',
-      description:
-        'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
+      type: { cs: 'spolupráce', en: 'cooperation' },
+      description: {
+        cs: 'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
+        en: '',
+      },
       technologies: ['PHP', 'MySQL', 'Magento', 'Redis', 'TS', 'React'],
     },
     {
       name: 'ShopMaker.cz',
-      subtitle: 'Pronájem krabicového řešení e-shopu',
+      subtitle: {
+        cs: 'Pronájem krabicového řešení e-shopu',
+        en: 'Out of the box e-shop solution',
+      },
       years: '2014 - 2018',
-      type: 'vlastní projekt',
+      type: { cs: 'vlastní projekt', en: 'my project' },
       url: 'https://www.shopmaker.cz/',
-      description:
-        'Provoz a vývoj e-shopového portálu - vlastní e-shop na pár kliknutí. Správa objednávek, skladová evidence, podrobné statistiky, napojení na služby třetích stran, 50+ klientů.',
+      description: {
+        cs: 'Provoz a vývoj e-shopového portálu - vlastní e-shop na pár kliknutí. Správa objednávek, skladová evidence, podrobné statistiky, napojení na služby třetích stran, 50+ klientů.',
+        en: '',
+      },
       technologies: ['PHP', 'MySQL', 'JS', 'jQuery', 'Nette'],
       thumbnail: '/images/projects/shopmaker/screenshot1.png',
       images: [
@@ -80,12 +93,17 @@ export const appContextData: AppContextProps = {
     },
     {
       name: 'RealCraft.cz',
-      subtitle: 'Herní portál Minecraft serveru',
+      subtitle: {
+        cs: 'Herní portál Minecraft serveru',
+        en: 'Minecraft game server',
+      },
       years: '2015 - 2019',
-      type: 'vlastní projekt',
+      type: { cs: 'vlastní projekt', en: 'my project' },
       url: 'https://www.realcraft.cz/',
-      description:
-        'Provoz a vývoj webu a herních pluginů, obchodní model mikrotransakce, spolupráce v 10+ členném týmu.',
+      description: {
+        cs: 'Provoz a vývoj webu a herních pluginů, obchodní model mikrotransakce, spolupráce v 10+ členném týmu.',
+        en: '',
+      },
       technologies: ['Java', 'PHP', 'MySQL', 'JS', 'jQuery'],
       thumbnail: '/images/projects/realcraft/web1.png',
       images: [
@@ -97,11 +115,16 @@ export const appContextData: AppContextProps = {
     },
     {
       name: 'Freelancer',
-      subtitle: 'Na volné noze v tvorbě webů na zakázku',
+      subtitle: {
+        cs: 'Na volné noze v tvorbě webů na zakázku',
+        en: 'Freelance in custom web development',
+      },
       years: '2013 - 2014',
-      type: 'spolupráce',
-      description:
-        'Dokončeno přes 15 projektů - kódování grafických návrhů, úpravy stávajících stránek.',
+      type: { cs: 'spolupráce', en: 'cooperation' },
+      description: {
+        cs: 'Dokončeno přes 15 projektů - kódování grafických návrhů, úpravy stávajících stránek.',
+        en: '',
+      },
       technologies: ['PHP', 'HTML', 'JS'],
       thumbnail: '/images/projects/freelancer/web1.png',
       images: [
@@ -113,11 +136,16 @@ export const appContextData: AppContextProps = {
     },
     {
       name: 'Reálný Život',
-      subtitle: 'Herní portál GTA: San Andreas serveru',
+      subtitle: {
+        cs: 'Herní portál GTA: San Andreas serveru',
+        en: 'GTA: San Andreas game server',
+      },
       years: '2008 - 2015',
-      type: 'vlastní projekt',
-      description:
-        'Provoz a vývoj webu a herního módu, obchodní model mikrotransakce, spolupráce ve 20+ členném týmu.',
+      type: { cs: 'vlastní projekt', en: 'my project' },
+      description: {
+        cs: 'Provoz a vývoj webu a herního módu, obchodní model mikrotransakce, spolupráce ve 20+ členném týmu.',
+        en: '',
+      },
       technologies: ['Pawn', 'PHP', 'MySQL', 'JS', 'jQuery'],
       thumbnail: '/images/projects/realny-zivot/web1.png',
       images: [
@@ -129,9 +157,12 @@ export const appContextData: AppContextProps = {
     },
     {
       name: 'VOŠ a SPŠE Plzeň',
-      subtitle: 'Správa počítačových sítí',
+      subtitle: {
+        cs: 'Správa počítačových sítí',
+        en: 'Computer network management',
+      },
       years: '2009 - 2013',
-      type: 'vzdělání',
+      type: { cs: 'vzdělání', en: 'education' },
       technologies: ['PHP', 'MySQL', 'Java', 'C', 'JS'],
       thumbnail: '/images/projects/spseplzen.png',
     },

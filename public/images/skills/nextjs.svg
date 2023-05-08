@@ -1,16 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
   <g>
-    <defs>
-      <filter id="a" filterUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
-        <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/>
-      </filter>
-    </defs>
-    <mask maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256" id="b">
-      <g filter="url(#a)">
-        <circle cx="128" cy="128" r="128" fill="#fff"/>
-      </g>
-    </mask>
-    <g mask="url(#b)">
+    <g>
       <circle cx="128" cy="128" r="128"/>
       <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="-463.15" y1="546.367" x2="-462.874" y2="545.97" gradientTransform="matrix(135.8336 0 0 -157.6462 63044.094 86314.21)">
         <stop offset="0" stop-color="#fff"/>

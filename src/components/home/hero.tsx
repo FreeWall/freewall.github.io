@@ -19,20 +19,23 @@ export default function Hero() {
             <h1 className="mb-6 text-3xl font-semibold text-hightlight">
               {t('hero-heading')}
             </h1>
-            <p className="w-3/5 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              quam velit, vulputate eu pharetra nec, mattis ac neque. Duis
-              vulputate commodo lectus.
-            </p>
+            <p
+              className="text-base"
+              dangerouslySetInnerHTML={{ __html: t('hero-text') }}
+            ></p>
             <div className="mt-10 flex items-center">
               <div className="flex items-center">
-                <div className="text-[44px] text-hightlight">15</div>
+                <div className="text-[44px] font-medium text-hightlight">
+                  15
+                </div>
                 <div className="ml-[14px] w-min whitespace-break-spaces text-base leading-5">
                   {t('years-experience')}
                 </div>
               </div>
               <div className="ml-14 flex items-center">
-                <div className="text-[44px] text-hightlight">20</div>
+                <div className="text-[44px] font-medium text-hightlight">
+                  20
+                </div>
                 <div className="ml-[14px] w-min whitespace-break-spaces text-base leading-5">
                   {t('finished-projects')}
                 </div>
