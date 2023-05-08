@@ -24,7 +24,10 @@ export default function Footer() {
             className="flex cursor-pointer items-center hover:text-hightlight"
             onClick={(e) => {
               e.preventDefault();
-              saveAs('/cv/' + i18n.language + '.pdf', 'michalvanek.pdf');
+              saveAs(
+                '/cv/' + i18n.language + '/michalvanek.pdf',
+                'michalvanek.pdf',
+              );
             }}
           >
             <GrDocumentPdf

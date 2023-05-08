@@ -8,7 +8,7 @@ export default function Header() {
   const { author, links } = useApp();
 
   const onScroll = () => {
-    setCompact(window.scrollY > 10);
+    setCompact(window.scrollY > 40);
   };
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header
-      className={classNames('fixed w-full bg-main', {
+      className={classNames('fixed z-10 w-full bg-main', {
         'shadow-header': isCompact,
       })}
     >
