@@ -33,14 +33,14 @@ function SkillIcon(props: SkillIconProps) {
     return (
       <div
         className={classNames(
-          'group flex h-32 w-32 items-center rounded-full bg-secondary transition-[scale_0s] hover:scale-110',
+          'group z-20 flex h-32 w-32 scale-100 items-center rounded-full bg-secondary transition-[scale_0s] hover:scale-110',
           props.className,
         )}
       >
         {props.children}
         <div
           className={classNames(
-            'absolute left-1/2 -translate-x-1/2 whitespace-nowrap text-center text-sm font-medium opacity-0 group-hover:opacity-100',
+            'absolute left-1/2 z-30 -translate-x-1/2 whitespace-nowrap text-center text-sm font-medium opacity-0 group-hover:opacity-100',
             {
               '-top-6 pb-2': props.rotate >= 90,
               '-bottom-6 pt-2': props.rotate >= -90 && props.rotate < 90,
@@ -60,7 +60,7 @@ function SkillIcon(props: SkillIconProps) {
     >
       <div
         className={classNames(
-          'group absolute flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-secondary transition-[scale_0s] hover:scale-110',
+          'group absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-secondary transition-[scale_0s] hover:scale-110',
           { 'mt-40 h-24 w-24': props.size == 'medium' },
           { 'mt-36 h-16 w-16': props.size == 'small' },
         )}
@@ -90,6 +90,11 @@ function SkillIcon(props: SkillIconProps) {
           </div>
         </div>
       </div>
+      {props.size == 'medium' && (
+        <div className="absolute mt-40 h-24 -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute bottom-16 left-1/2 flex h-full w-8 -translate-x-1/2 bg-secondary" />
+        </div>
+      )}
     </div>
   );
 }
@@ -106,14 +111,6 @@ export default function Skills() {
         <div className="space-y-10">
           <div className="flex items-center space-x-20">
             <div className="relative p-32">
-              <SkillIcon
-                name="React"
-                size="large"
-                rotate={0}
-                className="p-4"
-              >
-                <ReactIcon />
-              </SkillIcon>
               <SkillIcon
                 name="Next.js"
                 size="medium"
@@ -137,6 +134,14 @@ export default function Skills() {
                 className="p-6"
               >
                 <HtmlIcon />
+              </SkillIcon>
+              <SkillIcon
+                name="React"
+                size="large"
+                rotate={120}
+                className="p-4"
+              >
+                <ReactIcon />
               </SkillIcon>
               <SkillIcon
                 name="GraphQL"
@@ -211,14 +216,6 @@ export default function Skills() {
             </div>
             <div className="relative p-32">
               <SkillIcon
-                name="Magento"
-                size="large"
-                rotate={120}
-                className="p-6"
-              >
-                <MagentoIcon />
-              </SkillIcon>
-              <SkillIcon
                 name="PHP"
                 size="medium"
                 rotate={120}
@@ -241,6 +238,14 @@ export default function Skills() {
                 className="p-3"
               >
                 <NetteIcon />
+              </SkillIcon>
+              <SkillIcon
+                name="Magento"
+                size="large"
+                rotate={120}
+                className="p-6"
+              >
+                <MagentoIcon />
               </SkillIcon>
               <SkillIcon
                 name="Java"

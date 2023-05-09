@@ -41,7 +41,7 @@ export const appContextData: AppContextProps = {
         cs: 'Senior developer v AITI Software s.r.o.',
         en: 'Senior developer in AITI Software s.r.o.',
       },
-      years: '2019 - 2023',
+      years: '2018 - 2023',
       type: { cs: 'spolupráce', en: 'cooperation' },
       description: {
         cs: 'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
