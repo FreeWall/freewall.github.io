@@ -22,6 +22,25 @@ export const getStaticPaths: GetStaticPaths = () => ({
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { locales } = nextI18NextConfig.i18n;
 
+  const apiKey = '';
+  const userId = 'FreeWall';
+
+  const data = await (
+    await fetch(
+      'https://wakatime.com/api/v1/users/' +
+        userId +
+        '/insights/languages/last_30_days',
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Basic ${Buffer.from(apiKey).toString('base64')}`,
+        },
+      },
+    )
+  ).json();
+
+  console.log(data);
+
   return {
     props: {
       locales,

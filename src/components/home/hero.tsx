@@ -1,8 +1,10 @@
+import { useApp } from '@/contexts/app';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/future/image';
 
 export default function Hero() {
   const { t } = useTranslation('common');
+  const { author } = useApp();
 
   return (
     <>
@@ -10,20 +12,19 @@ export default function Hero() {
         <div className="flex items-end">
           <Image
             src="/images/profilephoto-hero.webp"
-            width={330}
+            width={300}
             height={300}
-            quality={100}
-            alt=""
+            alt={author.fullname}
           />
-          <div className="mb-10 ml-24">
+          <div className="mb-10 ml-20">
             <h1 className="mb-6 text-3xl font-semibold text-hightlight">
               {t('hero-heading')}
             </h1>
             <p
               className="text-base"
               dangerouslySetInnerHTML={{ __html: t('hero-text') }}
-            ></p>
-            <div className="mt-10 flex items-center">
+            />
+            <div className="mt-8 flex items-center">
               <div className="flex items-center">
                 <div className="text-[44px] font-medium text-hightlight">
                   15
@@ -40,6 +41,11 @@ export default function Hero() {
                   {t('finished-projects')}
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="mb-12 ml-10">
+            <div className="text-xl font-semibold leading-none text-hightlight">
+              {t('typing-in-heading')}
             </div>
           </div>
         </div>
