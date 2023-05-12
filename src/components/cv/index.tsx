@@ -1,4 +1,5 @@
 import { useApp } from '@/contexts/app';
+import { i18nextLocale } from '@/utils/i18next';
 import { Document, Font, Page, View } from '@react-pdf/renderer';
 import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
@@ -41,7 +42,13 @@ const tw = createTw({
   },
 });
 
-export default function Cv({ t }: { t: TFunction<'common'> }) {
+export default function Cv({
+  t,
+  locale,
+}: {
+  t: TFunction<'common'>;
+  locale: i18nextLocale;
+}) {
   const { author } = useApp();
 
   return (
@@ -64,6 +71,7 @@ export default function Cv({ t }: { t: TFunction<'common'> }) {
             <Projects
               t={t}
               tw={tw}
+              locale={locale}
             />
           </View>
         </View>

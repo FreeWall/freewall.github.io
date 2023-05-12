@@ -15,13 +15,19 @@ export default function Index() {
     return null;
   }
 
-  return <Cv t={t} />;
+  return (
+    <Cv
+      t={t}
+      locale={'cs'}
+    />
+  );
 }
 
 Index.getLayout = false;
 
 import cs from '@/locales/cs/common.json';
 import en from '@/locales/en/common.json';
+import { i18nextLocale } from '@/utils/i18next';
 
 export const getStaticPaths: GetStaticPaths = () => ({
   fallback: false,
@@ -53,7 +59,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       i18n={i18n}
       defaultNS={'common'}
     >
-      <Cv t={i18n.t} />
+      <Cv
+        t={i18n.t}
+        locale={ctx.params?.locale as i18nextLocale}
+      />
     </I18nextProvider>,
   );
 

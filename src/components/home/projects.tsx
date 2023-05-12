@@ -91,7 +91,7 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-                {false && project.thumbnail && (
+                {/* {false && project.thumbnail && (
                   <div>
                     {project.images && (
                       <div onClick={() => project.onGalleryClick()}>
@@ -111,7 +111,7 @@ export default function Projects() {
                       />
                     )}
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           ))}

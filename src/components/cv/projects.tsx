@@ -1,4 +1,5 @@
 import { useApp } from '@/contexts/app';
+import { i18nextLocale } from '@/utils/i18next';
 import { Text, View } from '@react-pdf/renderer';
 import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
@@ -6,9 +7,11 @@ import { createTw } from 'react-pdf-tailwind';
 export default function Projects({
   t,
   tw,
+  locale,
 }: {
   t: TFunction<'common'>;
   tw: ReturnType<typeof createTw>;
+  locale: i18nextLocale;
 }) {
   const { projects } = useApp();
 
@@ -39,7 +42,7 @@ export default function Projects({
                 'text-[0.6rem] text-[#555555] font-medium rounded-[2px] px-2 py-1.5 mb-5 uppercase bg-[#ebebeb]',
               )}
             >
-              {project.type}
+              {project.type[locale]}
             </Text>
           </View>
           <View style={tw('ml-4 mr-7')}>
@@ -57,10 +60,10 @@ export default function Projects({
           <View style={tw('w-[255px] pb-[1.45em]')}>
             <Text style={tw('text-base font-semibold')}>{project.name}</Text>
             <Text style={tw('text-sm font-medium mb-3.5')}>
-              {project.subtitle}
+              {project.subtitle[locale]}
             </Text>
             <Text style={tw('text-[0.75rem] leading-[1.45rem]')}>
-              {project.description}
+              {project.description?.[locale]}
             </Text>
           </View>
         </View>
