@@ -5,7 +5,7 @@ import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
 import InterMedium from '../../fonts/Inter-Medium.ttf';
 import InterRegular from '../../fonts/Inter-Regular.ttf';
-import InterSemibold from '../../fonts/Inter-Semibold.ttf';
+import InterSemibold from '../../fonts/Inter-SemiBold.ttf';
 import Head from './head';
 import Projects from './projects';
 import Sidebar from './sidebar';
