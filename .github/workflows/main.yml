@@ -14,5 +14,5 @@ jobs:
         with:
           branch: gh-pages-newdark
           folder: build
-          clean: true
+          clean: false
           clean-exclude: .nojekyll
