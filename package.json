@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export -o build",
-    "deploy": "npm install && npm run build && npm run export && touch ./build/_next/.nojekyll"
+    "export": "next export -o build && touch ./build/.nojekyll",
+    "deploy": "npm install && npm run build && npm run export"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^12.3.1",
