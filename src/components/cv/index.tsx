@@ -1,12 +1,13 @@
 import { useApp } from '@/contexts/app';
+import InterMedium from '@/fonts/Inter-Medium.ttf';
+import InterRegular from '@/fonts/Inter-Regular.ttf';
+import InterSemibold from '@/fonts/Inter-SemiBold.ttf';
 import { i18nextLocale } from '@/utils/i18next';
 import { Document, Font, Page, View } from '@react-pdf/renderer';
 import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
-import InterMedium from '../../fonts/Inter-Medium.ttf';
-import InterRegular from '../../fonts/Inter-Regular.ttf';
-import InterSemibold from '../../fonts/Inter-SemiBold.ttf';
 import Head from './head';
+import Perex from './perex';
 import Projects from './projects';
 import Sidebar from './sidebar';
 
@@ -65,6 +66,10 @@ export default function Cv({
 
           <View>
             <Head
+              t={t}
+              tw={tw}
+            />
+            <Perex
               t={t}
               tw={tw}
             />

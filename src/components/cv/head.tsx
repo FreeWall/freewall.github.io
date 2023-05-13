@@ -13,7 +13,7 @@ export default function Head({
   const { author } = useApp();
 
   return (
-    <View style={tw('px-[2.4rem] py-[2.6rem] mb-2')}>
+    <View style={tw('px-[2.4rem] py-[2.6rem]')}>
       <Text style={tw('text-[2.12rem] font-semibold leading-5 mb-1.5')}>
         {author.fullname}
       </Text>

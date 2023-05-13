@@ -30,8 +30,8 @@ export const appContextData: AppContextProps = {
       type: { cs: 'spolupráce', en: 'cooperation' },
       url: 'https://www.goodform.de',
       description: {
-        cs: 'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
-        en: '',
+        cs: 'Nábytek, designové prvky a svítidla švýcarského online obchodu. Správa a vývoj headless frontendu s napojením na Magento backend.',
+        en: 'Design, furniture and design lamps Swiss online shop. Development of headless frontend integrated with Magento backend.',
       },
       technologies: ['Magento', 'TS', 'React', 'Next.js'],
     },
@@ -45,7 +45,7 @@ export const appContextData: AppContextProps = {
       type: { cs: 'spolupráce', en: 'cooperation' },
       description: {
         cs: 'Ateli s.r.o. a její dceřinné společnosti provozují několik e-commerce projektů ve 12 zemích evropy s vlastními sklady, expedicí i logistikou.',
-        en: '',
+        en: 'Ateli s.r.o. operate several e-commerce projects in 12 European countries with their own warehouses, shipping and logistics.',
       },
       technologies: ['PHP', 'MySQL', 'Magento', 'Redis', 'TS', 'React'],
     },
@@ -60,7 +60,7 @@ export const appContextData: AppContextProps = {
       url: 'https://www.shopmaker.cz/',
       description: {
         cs: 'Provoz a vývoj e-shopového portálu - vlastní e-shop na pár kliknutí. Správa objednávek, skladová evidence, podrobné statistiky, napojení na služby třetích stran, 50+ klientů.',
-        en: '',
+        en: 'Operation and development of an e-shop portal - your own e-shop in a few clicks. Order management, stock records, detailed statistics, connection to third party services, 50+ clients.',
       },
       technologies: ['PHP', 'MySQL', 'JS', 'jQuery', 'Nette'],
       thumbnail: '/images/projects/shopmaker/screenshot1.png',
@@ -102,7 +102,7 @@ export const appContextData: AppContextProps = {
       url: 'https://www.realcraft.cz/',
       description: {
         cs: 'Provoz a vývoj webu a herních pluginů, obchodní model mikrotransakce, spolupráce v 10+ členném týmu.',
-        en: '',
+        en: 'Operation and development of website and game plugins, microtransaction business model, a 10+ member team.',
       },
       technologies: ['Java', 'PHP', 'MySQL', 'JS', 'jQuery'],
       thumbnail: '/images/projects/realcraft/web1.png',
@@ -122,8 +122,8 @@ export const appContextData: AppContextProps = {
       years: '2013 - 2014',
       type: { cs: 'spolupráce', en: 'cooperation' },
       description: {
-        cs: 'Dokončeno přes 15 projektů - kódování grafických návrhů, úpravy stávajících stránek.',
-        en: '',
+        cs: 'Dokončeno přes 15 projektů - kódování grafických návrhů, implementace CMS systému.',
+        en: 'Completed over 15 projects - coding graphic designs, CMS systems implementation.',
       },
       technologies: ['PHP', 'HTML', 'JS'],
       thumbnail: '/images/projects/freelancer/web1.png',
@@ -144,7 +144,7 @@ export const appContextData: AppContextProps = {
       type: { cs: 'vlastní projekt', en: 'my project' },
       description: {
         cs: 'Provoz a vývoj webu a herního módu, obchodní model mikrotransakce, spolupráce ve 20+ členném týmu.',
-        en: '',
+        en: 'Operation and development of website and game mode, microtransaction business model, a 20+ member team.',
       },
       technologies: ['Pawn', 'PHP', 'MySQL', 'JS', 'jQuery'],
       thumbnail: '/images/projects/realny-zivot/web1.png',

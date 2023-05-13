@@ -196,10 +196,8 @@ export default function Skills() {
               <h3 className="mb-4 text-3xl font-semibold text-hightlight">
                 Frontend
               </h3>
-              <p className="text-base line-through">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                quam velit, vulputate eu pharetra nec, mattis ac neque. Duis
-                vulputate commodo lectus.
+              <p className="text-base">
+                - react, nextjs, typescript, tailwindcss
               </p>
             </div>
           </div>
@@ -208,10 +206,8 @@ export default function Skills() {
               <h3 className="mb-4 text-3xl font-semibold text-hightlight">
                 Backend
               </h3>
-              <p className="text-base line-through">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                quam velit, vulputate eu pharetra nec, mattis ac neque. Duis
-                vulputate commodo lectus.
+              <p className="text-base">
+                - php, mysql, magento, nette, apache, linux
               </p>
             </div>
             <div className="relative p-32">
