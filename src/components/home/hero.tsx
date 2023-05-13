@@ -55,39 +55,42 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="mb-12">
-            <div className="ml-auto w-[200px] space-y-1.5">
-              {languages?.map((language, idx) => (
-                <div key={idx}>
-                  <div className="mb-0.5 flex items-center justify-between font-medium">
-                    <div className="text-base text-hightlight">
-                      {language.name}
+          {!!languages?.length && (
+            <div className="mb-12">
+              <div className="ml-auto w-[200px] space-y-1.5">
+                {languages?.map((language, idx) => (
+                  <div key={idx}>
+                    <div className="mb-0.5 flex items-center justify-between font-medium">
+                      <div className="text-base text-hightlight">
+                        {language.name}
+                      </div>
+                      <div className="text-sm">
+                        {language.hours > 0
+                          ? language.hours + ' ' + t('hrs')
+                          : language.minutes + ' ' + t('mins')}
+                      </div>
                     </div>
-                    <div className="text-sm">
-                      {language.hours > 0
-                        ? language.hours + ' ' + t('hrs')
-                        : language.minutes + ' ' + t('mins')}
+                    <div className="relative h-[5px] w-full rounded-sm bg-secondary">
+                      <div
+                        className="absolute h-[5px] rounded-[3px]"
+                        style={{
+                          width:
+                            Math.max(
+                              (language.hours * 100) / languagesHoursSum < 10
+                                ? ((language.hours * 100) / languagesHoursSum) *
+                                    2
+                                : (language.hours * 100) / languagesHoursSum,
+                              5,
+                            ) + '%',
+                          background: languageColor[language.name] ?? '#bbbbbb',
+                        }}
+                      />
                     </div>
                   </div>
-                  <div className="relative h-[5px] w-full rounded-sm bg-secondary">
-                    <div
-                      className="absolute h-[5px] rounded-[3px]"
-                      style={{
-                        width:
-                          Math.max(
-                            (language.hours * 100) / languagesHoursSum < 10
-                              ? ((language.hours * 100) / languagesHoursSum) * 2
-                              : (language.hours * 100) / languagesHoursSum,
-                            5,
-                          ) + '%',
-                        background: languageColor[language.name] ?? '#bbbbbb',
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </>

@@ -24,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = () => ({
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { locales } = nextI18NextConfig.i18n;
 
-  const apiKey = 'waka_31faa1e5-7bcb-4477-b4c0-5a336da165c3';
+  const apiKey = process.env.WAKATIME_API_KEY;
   const userId = 'FreeWall';
 
   const { data }: WakatimeLanguagesResponse = await (

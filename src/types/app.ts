@@ -14,3 +14,11 @@ export type CustomAppProps<P = unknown> = AppProps<
 > & {
   Component: CustomPage<P>;
 };
+
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      readonly WAKATIME_API_KEY: string;
+    }
+  }
+}
