@@ -3,12 +3,14 @@
   "hero-text": "Jsem webový vývojář, jehož vášní je frontend s Reactem,<br/>ale nemálo času jsem strávil i v backendu s PHPčkem.",
   "years-experience": "let zkušeností",
   "finished-projects": "dokončených projektů",
-  "typing-in-heading": "V čem právě píšu?",
+  "typing-in-heading": "Tento měsíc píšu:",
   "experience": "Zkušenosti",
   "skills": "Dovednosti",
   "contact": "Kontakt",
   "education": "Vzdělání",
   "page-not-found": "Stránka nenalezena",
   "resume": "Životopis",
-  "technologies": "Technologie"
+  "technologies": "Technologie",
+  "hrs": "hod",
+  "mins": "min"
 }

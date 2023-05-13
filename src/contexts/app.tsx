@@ -52,6 +52,11 @@ export interface AppContextProps {
     icon: IconType;
   }[];
   projects: ProjectProps[];
+  languages?: {
+    name: string;
+    hours: number;
+    minutes: number;
+  }[];
 }
 
 export function useApp() {
@@ -64,15 +69,13 @@ export function AppProvider(props: {
   props: AppContextProps;
   children: ReactNode;
 }) {
-  if (!props.props) {
-    props = {
-      props: appContextData,
-      children: props.children,
-    };
-  }
-
   return (
-    <AppContext.Provider value={{ ...props.props }}>
+    <AppContext.Provider
+      value={{
+        ...appContextData,
+        ...props.props,
+      }}
+    >
       {props.children}
     </AppContext.Provider>
   );

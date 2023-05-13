@@ -1,5 +1,7 @@
 import Home from '@/components/home';
+import { AppContextProps } from '@/contexts/app';
 import { useLocaleRedirect } from '@/hooks/useLocaleRedirect';
+import { WakatimeLanguagesResponse } from '@/types/wakatime';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import nextI18NextConfig from '../../../next-i18next.config';
@@ -22,24 +24,30 @@ export const getStaticPaths: GetStaticPaths = () => ({
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { locales } = nextI18NextConfig.i18n;
 
-  const apiKey = '';
+  const apiKey = 'waka_31faa1e5-7bcb-4477-b4c0-5a336da165c3';
   const userId = 'FreeWall';
 
-  const data = await (
-    await fetch(
-      'https://wakatime.com/api/v1/users/' +
-        userId +
-        '/insights/languages/last_30_days',
-      {
-        method: 'GET',
-        headers: {
-          Authorization: `Basic ${Buffer.from(apiKey).toString('base64')}`,
-        },
+  const { data }: WakatimeLanguagesResponse = await (
+    await fetch('https://wakatime.com/api/v1/users/' + userId + '/stats', {
+      headers: {
+        Authorization: 'Basic ' + Buffer.from(apiKey).toString('base64'),
       },
-    )
+    })
   ).json();
 
-  console.log(data);
+  const languages: AppContextProps['languages'] = [];
+
+  data?.languages
+    ?.sort((a, b) => b.total_seconds - a.total_seconds)
+    .filter((language) => !['Other', 'JSON'].includes(language.name))
+    .slice(0, 5)
+    .map((language) => {
+      languages.push({
+        name: language.name,
+        hours: language.hours,
+        minutes: language.minutes,
+      });
+    });
 
   return {
     props: {
@@ -48,6 +56,9 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
         (ctx.params?.locale as string) ?? nextI18NextConfig.i18n.defaultLocale,
         ['common'],
       )),
+      appContextProps: {
+        languages,
+      },
     },
   };
 };

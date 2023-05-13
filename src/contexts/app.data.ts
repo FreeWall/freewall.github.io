@@ -95,7 +95,7 @@ export const appContextData: AppContextProps = {
       name: 'RealCraft.cz',
       subtitle: {
         cs: 'Herní portál Minecraft serveru',
-        en: 'Minecraft game server',
+        en: 'Minecraft community server',
       },
       years: '2015 - 2019',
       type: { cs: 'vlastní projekt', en: 'my project' },
@@ -138,7 +138,7 @@ export const appContextData: AppContextProps = {
       name: 'Reálný Život',
       subtitle: {
         cs: 'Herní portál GTA: San Andreas serveru',
-        en: 'GTA: San Andreas game server',
+        en: 'GTA: San Andreas community server',
       },
       years: '2008 - 2015',
       type: { cs: 'vlastní projekt', en: 'my project' },

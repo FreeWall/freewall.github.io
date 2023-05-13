@@ -10,5 +10,7 @@
   "education": "Education",
   "page-not-found": "Page not found",
   "resume": "Resume",
-  "technologies": "Tech stack"
+  "technologies": "Tech stack",
+  "hrs": "hrs",
+  "mins": "mins"
 }
