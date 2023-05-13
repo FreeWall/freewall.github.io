@@ -57,6 +57,9 @@ export default function Hero() {
           </div>
           {!!languages?.length && (
             <div className="mb-12">
+              <div className="mb-2 text-right text-xl font-semibold text-hightlight">
+                {new Date().getFullYear()}
+              </div>
               <div className="ml-auto w-[200px] space-y-1.5">
                 {languages?.map((language, idx) => (
                   <div key={idx}>

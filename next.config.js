@@ -23,7 +23,7 @@ module.exports = function next(stage) {
     defineNextConfig({
       distDir: '_next',
       output: 'standalone',
-      assetPrefix: './',
+      assetPrefix: stage == PHASE_DEVELOPMENT_SERVER ? undefined : './',
       reactStrictMode: false,
       swcMinify: false,
       images: {
