@@ -57,7 +57,7 @@ export default function Hero() {
           </div>
           {!!languages?.length && (
             <div className="mb-12">
-              <div className="mb-2 text-right text-xl font-semibold text-hightlight">
+              <div className="mb-2.5 text-right text-xl font-semibold text-hightlight">
                 {new Date().getFullYear()}
               </div>
               <div className="ml-auto w-[200px] space-y-1.5">
@@ -73,9 +73,9 @@ export default function Hero() {
                           : language.minutes + ' ' + t('mins')}
                       </div>
                     </div>
-                    <div className="relative h-[5px] w-full rounded-sm bg-secondary">
+                    <div className="relative h-[5px] w-full overflow-x-hidden rounded-sm bg-secondary">
                       <div
-                        className="absolute h-[5px] rounded-[3px]"
+                        className="absolute h-[5px] -translate-x-full animate-progress rounded-[3px]"
                         style={{
                           width:
                             Math.max(

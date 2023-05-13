@@ -28,6 +28,19 @@ module.exports = {
         header:
           '0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px 0px rgb(0 0 0 / 0.2);',
       },
+      animation: {
+        progress: 'progress 1s ease 0.3s forwards',
+      },
+      keyframes: {
+        progress: {
+          '0%': {
+            transform: 'translateX(-100%)',
+          },
+          '100%': {
+            transform: 'translateX(0%)',
+          },
+        },
+      },
     },
   },
   plugins: [],
