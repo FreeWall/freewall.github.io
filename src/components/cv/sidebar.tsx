@@ -17,7 +17,7 @@ export default function Sidebar({
     <View style={tw('bg-[#e8eef2] w-[29.2%] py-10')}>
       <Img
         source={image}
-        style={tw('rounded-full mx-auto -rotate-[4] w-[67%] mb-9')}
+        style={tw('rounded-full mx-auto -rotate-[5] w-[67%] mb-9')}
       />
 
       <View style={tw('pl-6')}>

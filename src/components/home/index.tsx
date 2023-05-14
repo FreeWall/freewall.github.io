@@ -1,20 +1,21 @@
-import { useTranslation } from 'next-i18next';
+import { useApp } from '@/contexts/app';
 import Head from 'next/head';
 import Hero from './hero';
 import Projects from './projects';
-import Skills from './skills';
 
 export default function Home() {
-  const { t } = useTranslation('common');
+  const { author } = useApp();
 
   return (
     <>
       <Head>
-        <title>Michal Vaněk | web developer</title>
+        <title>{author.fullname + ' | web developer'}</title>
       </Head>
       <Hero />
       <Projects />
-      <Skills />
+      {/*
+      <Projects />
+      <Skills /> */}
     </>
   );
 }

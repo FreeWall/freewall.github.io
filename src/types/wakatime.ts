@@ -5,7 +5,6 @@ export interface WakatimeLanguagesResponse {
       total_seconds: number;
       hours: number;
       minutes: number;
-      percent: number;
     }[];
   };
   error?: string;

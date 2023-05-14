@@ -18,11 +18,17 @@ body {
 
 @layer components {
   .wrapper {
-    @apply mx-auto max-w-pc px-11;
+    @apply mx-auto max-w-pc px-7 md:px-11;
   }
 }
 
 .forceStroke > path,
 g {
   stroke: currentColor;
+}
+
+@media (max-width: 768px) {
+  br.mobile {
+    display: none;
+  }
 }

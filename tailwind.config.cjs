@@ -12,13 +12,12 @@ module.exports = {
       },
       spacing: {
         pc: '1140px',
-        mobile: '768px',
       },
       colors: {
         main: '#292e33',
         secondary: '#35393e',
         hightlight: '#ffffff',
-        body: '#bbbbbb',
+        body: '#b2b8bf',
         conversion: '#36a9dc',
       },
       maxWidth: {
@@ -29,7 +28,7 @@ module.exports = {
           '0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px 0px rgb(0 0 0 / 0.2);',
       },
       animation: {
-        progress: 'progress 1s ease 0.3s forwards',
+        progress: 'progress 0.7s ease 0.3s forwards',
       },
       keyframes: {
         progress: {

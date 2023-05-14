@@ -26,8 +26,8 @@ export default function Projects() {
 
   return (
     <div className="bg-secondary">
-      <div className="wrapper py-16">
-        <h2 className="mb-16 text-3xl font-semibold text-hightlight">
+      <div className="wrapper py-8 md:py-16">
+        <h2 className="mb-8 text-2xl font-semibold text-hightlight md:mb-16 md:text-3xl">
           {t('experience')}
         </h2>
         <div>
@@ -36,7 +36,7 @@ export default function Projects() {
               className="flex"
               key={idx}
             >
-              <div className="flex flex-shrink-0 flex-grow-0 basis-[120px] flex-col items-center">
+              <div className="hidden flex-shrink-0 flex-grow-0 basis-[120px] flex-col items-center md:flex">
                 <div className="mb-1.5 text-lg font-medium">
                   {project.years}
                 </div>
@@ -44,45 +44,50 @@ export default function Projects() {
                   {project.type[i18n.language as i18nextLocale]}
                 </div>
               </div>
-              <div className="relative ml-7 mr-10">
+              <div className="relative ml-7 mr-10 hidden md:block">
                 {idx < projects.length - 1 && (
-                  <div className="absolute left-[calc(50%_-_2px)] top-[6px] h-full w-[4px] bg-main"></div>
+                  <div className="absolute left-[calc(50%_-_2px)] top-[6px] h-full w-[4px] bg-main" />
                 )}
-                <div className="absolute left-[calc(50%_-_6px)] top-[6px] h-[12px] w-[12px] rounded-full bg-conversion"></div>
+                <div className="absolute left-[calc(50%_-_6px)] top-[6px] h-[12px] w-[12px] rounded-full bg-conversion" />
               </div>
-              <div className="mb-14 flex flex-shrink-0 flex-grow">
+              <div className="mb-14 flex-grow md:flex md:flex-shrink-0">
                 <div>
-                  <h3 className="text-xl font-semibold leading-none text-hightlight">
-                    {(project.url && (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="group inline-flex items-center"
-                      >
-                        {project.name}
-                        <FaExternalLinkAlt className="ml-3 text-lg text-body group-hover:text-hightlight" />
-                      </a>
-                    )) ||
-                      project.name}
-                  </h3>
-                  <h4 className="mt-1.5 text-lg font-medium text-[#dddddd]">
-                    {project.subtitle[i18n.language as i18nextLocale]}
-                  </h4>
+                  <div className="flex items-center md:block">
+                    <div className="mr-4 h-[42px] w-1 bg-conversion md:hidden"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold leading-none text-hightlight md:text-xl">
+                        {(project.url && (
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="group inline-flex items-center"
+                          >
+                            {project.name}
+                            <FaExternalLinkAlt className="ml-3 text-base text-body group-hover:text-hightlight md:text-lg" />
+                          </a>
+                        )) ||
+                          project.name}
+                      </h3>
+                      <h4 className="mt-1.5 text-base font-medium leading-none text-[#dddddd] md:text-lg md:leading-normal">
+                        {project.subtitle[i18n.language as i18nextLocale]}
+                      </h4>
+                    </div>
+                  </div>
                   {project.description?.[i18n.language as i18nextLocale] && (
-                    <p className="mt-5 max-w-lg text-base">
+                    <p className="mt-4 max-w-lg text-xs md:mt-5 md:text-base">
                       {project.description?.[i18n.language as i18nextLocale]}
                     </p>
                   )}
-                  <div className="mt-5">
-                    <div className="mb-2 text-xs font-medium uppercase">
+                  <div className="mt-4 md:mt-5">
+                    <div className="mb-2 text-2xs font-medium uppercase md:text-xs">
                       {t('technologies')}
                     </div>
-                    <div className="flex space-x-2">
+                    <div className="flex flex-wrap gap-1 md:gap-2">
                       {project.technologies?.map((technology, idx) => (
                         <div
                           key={idx}
-                          className="rounded-[3px] bg-main px-2.5 py-1.5 text-xs font-semibold"
+                          className="rounded-[3px] bg-main px-2 py-1 text-2xs font-semibold md:px-2.5 md:py-1.5 md:text-xs"
                           style={{ color: technologyColor[technology] }}
                         >
                           {technology}
