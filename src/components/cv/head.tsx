@@ -14,7 +14,7 @@ export default function Head({
 
   return (
     <View style={tw('px-[2.4rem] py-[2.6rem]')}>
-      <Text style={tw('text-[2.12rem] font-semibold leading-5 mb-1.5')}>
+      <Text style={tw('text-[2.12rem] font-semibold leading-5 mb-[0.3rem]')}>
         {author.fullname}
       </Text>
       <Text style={tw('text-[18.5px] font-medium mb-4')}>web developer</Text>

@@ -12,7 +12,7 @@ export default function Perex({
   return (
     <View style={tw('px-[2.4rem] mb-[2.6rem] text-base leading-6')}>
       {t('hero-text')
-        .split('<br/>')
+        .split("<br class='mobile'/> ")
         .map((line, idx) => (
           <Text key={idx}>{line}</Text>
         ))}

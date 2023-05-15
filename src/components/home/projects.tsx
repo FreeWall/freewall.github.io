@@ -33,7 +33,7 @@ export default function Projects() {
         <div>
           {projects.map((project, idx) => (
             <div
-              className="flex"
+              className="mb-7 flex border-b-4 border-main pb-7 last:mb-0 last:border-none last:pb-0 md:mb-0 md:border-none md:pb-0"
               key={idx}
             >
               <div className="hidden flex-shrink-0 flex-grow-0 basis-[120px] flex-col items-center md:flex">
@@ -50,10 +50,10 @@ export default function Projects() {
                 )}
                 <div className="absolute left-[calc(50%_-_6px)] top-[6px] h-[12px] w-[12px] rounded-full bg-conversion" />
               </div>
-              <div className="mb-14 flex-grow md:flex md:flex-shrink-0">
+              <div className="flex-grow md:mb-14 md:flex md:flex-shrink-0">
                 <div>
                   <div className="flex items-center md:block">
-                    <div className="mr-4 h-[42px] w-1 bg-conversion md:hidden"></div>
+                    <div className="mr-4 h-[44px] w-1 bg-conversion md:hidden"></div>
                     <div>
                       <h3 className="text-lg font-semibold leading-none text-hightlight md:text-xl">
                         {(project.url && (
@@ -69,13 +69,16 @@ export default function Projects() {
                         )) ||
                           project.name}
                       </h3>
-                      <h4 className="mt-1.5 text-base font-medium leading-none text-[#dddddd] md:text-lg md:leading-normal">
+                      <h4 className="mt-2 text-base font-medium leading-none text-[#dddddd] md:mt-1.5 md:text-lg md:leading-normal">
                         {project.subtitle[i18n.language as i18nextLocale]}
                       </h4>
                     </div>
                   </div>
+                  <div className="mb-2.5 mt-4 font-medium md:hidden">
+                    {project.years}
+                  </div>
                   {project.description?.[i18n.language as i18nextLocale] && (
-                    <p className="mt-4 max-w-lg text-xs md:mt-5 md:text-base">
+                    <p className="mt-0 max-w-lg text-xs md:mt-5 md:text-base">
                       {project.description?.[i18n.language as i18nextLocale]}
                     </p>
                   )}

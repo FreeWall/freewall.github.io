@@ -2,6 +2,7 @@ import { useApp } from '@/contexts/app';
 import Head from 'next/head';
 import Hero from './hero';
 import Projects from './projects';
+import Skills from './skills';
 
 export default function Home() {
   const { author } = useApp();
@@ -13,9 +14,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Projects />
-      {/*
-      <Projects />
-      <Skills /> */}
+      <Skills />
     </>
   );
 }

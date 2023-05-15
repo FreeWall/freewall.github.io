@@ -103,179 +103,183 @@ export default function Skills() {
   const { t } = useTranslation('common');
 
   return (
-    <div className="">
-      <div className="wrapper py-16">
-        <h2 className="mb-10 text-3xl font-semibold text-hightlight">
-          {t('skills')}
-        </h2>
-        <div className="space-y-10">
-          <div className="flex items-center space-x-20">
-            <div className="relative p-32">
-              <SkillIcon
-                name="Next.js"
-                size="medium"
-                rotate={120}
-                className="p-4"
-              >
-                <NextJsIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="TypeScript"
-                size="medium"
-                rotate={240}
-                className="p-6"
-              >
-                <TypeScriptIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="HTML5"
-                size="medium"
-                rotate={0}
-                className="p-6"
-              >
-                <HtmlIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="React"
-                size="large"
-                rotate={120}
-                className="p-4"
-              >
-                <ReactIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="GraphQL"
-                size="small"
-                rotate={162}
-                className="p-3"
-              >
-                <GraphQLIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Apollo Client"
-                size="small"
-                rotate={198}
-                className="p-3"
-              >
-                <ApolloIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="tRPC"
-                size="small"
-                rotate={42}
-                className="p-3.5"
-              >
-                <TrpcIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Tailwind CSS"
-                size="small"
-                rotate={78}
-                className="p-3"
-              >
-                <TailwindCssIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Webpack"
-                size="small"
-                rotate={-42}
-                className="p-3.5"
-              >
-                <WebpackIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Jest"
-                size="small"
-                rotate={-78}
-                className="p-4"
-              >
-                <JestIcon />
-              </SkillIcon>
-            </div>
-            <div className="w-2/5">
-              <h3 className="mb-4 text-3xl font-semibold text-hightlight">
-                Frontend
-              </h3>
-              <p className="text-base">
-                - react, nextjs, typescript, tailwindcss
-              </p>
-            </div>
+    <div className="wrapper pt-8 md:py-16">
+      <h2 className="mb-10 hidden text-3xl font-semibold text-hightlight md:block">
+        {t('skills')}
+      </h2>
+      <div className="md:space-y-10">
+        <div className="flex flex-col items-center md:flex-row md:space-x-20">
+          <div className="relative order-2 -mt-16 scale-[.8] overflow-hidden p-32 py-40 md:order-none md:mx-0 md:mt-0 md:transform-none md:overflow-visible md:p-32">
+            <SkillIcon
+              name="Next.js"
+              size="medium"
+              rotate={120}
+              className="p-4"
+            >
+              <NextJsIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="TypeScript"
+              size="medium"
+              rotate={240}
+              className="p-6"
+            >
+              <TypeScriptIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="HTML5"
+              size="medium"
+              rotate={0}
+              className="p-6"
+            >
+              <HtmlIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="React"
+              size="large"
+              rotate={120}
+              className="p-4"
+            >
+              <ReactIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="GraphQL"
+              size="small"
+              rotate={162}
+              className="p-3"
+            >
+              <GraphQLIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Apollo Client"
+              size="small"
+              rotate={198}
+              className="p-3"
+            >
+              <ApolloIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="tRPC"
+              size="small"
+              rotate={42}
+              className="p-3.5"
+            >
+              <TrpcIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Tailwind CSS"
+              size="small"
+              rotate={78}
+              className="p-3"
+            >
+              <TailwindCssIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Webpack"
+              size="small"
+              rotate={-42}
+              className="p-3.5"
+            >
+              <WebpackIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Jest"
+              size="small"
+              rotate={-78}
+              className="p-4"
+            >
+              <JestIcon />
+            </SkillIcon>
           </div>
-          <div className="flex items-center justify-end space-x-20">
-            <div className="w-2/5">
-              <h3 className="mb-4 text-3xl font-semibold text-hightlight">
-                Backend
-              </h3>
-              <p className="text-base">
-                - php, mysql, magento, nette, apache, linux
-              </p>
-            </div>
-            <div className="relative p-32">
-              <SkillIcon
-                name="PHP"
-                size="medium"
-                rotate={120}
-                className="p-4"
-              >
-                <PhpIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="MySQL"
-                size="medium"
-                rotate={240}
-                className="p-3"
-              >
-                <MysqlIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Nette"
-                size="medium"
-                rotate={0}
-                className="p-3"
-              >
-                <NetteIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Magento"
-                size="large"
-                rotate={120}
-                className="p-6"
-              >
-                <MagentoIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Java"
-                size="small"
-                rotate={42}
-                className="p-4"
-              >
-                <JavaIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Linux Debian"
-                size="small"
-                rotate={78}
-                className="p-4"
-              >
-                <DebianIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Node.js"
-                size="small"
-                rotate={-42}
-                className="p-3"
-              >
-                <NodeIcon />
-              </SkillIcon>
-              <SkillIcon
-                name="Apache"
-                size="small"
-                rotate={-78}
-                className="p-4"
-              >
-                <ApacheIcon />
-              </SkillIcon>
-            </div>
+          <div className="mb-10 w-full md:mb-0 md:w-2/5">
+            <h3 className="mb-4 hidden text-3xl font-semibold text-hightlight md:block">
+              Frontend
+            </h3>
+            <h3 className="mb-3 text-2xl font-semibold text-hightlight md:hidden">
+              {t('frontend-skills')}
+            </h3>
+            <p className="text-base">
+              - react, nextjs, typescript, tailwindcss
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-end md:flex-row md:space-x-20 md:pb-4">
+          <div className="w-full md:w-2/5">
+            <h3 className="mb-4 hidden text-3xl font-semibold text-hightlight md:block">
+              Backend
+            </h3>
+            <h3 className="mb-3 text-2xl font-semibold text-hightlight md:hidden">
+              {t('backend-skills')}
+            </h3>
+            <p className="text-base">
+              - php, mysql, magento, nette, apache, linux
+            </p>
+          </div>
+          <div className="relative -mt-16 scale-[.8] overflow-hidden p-32 py-40 md:mx-0 md:transform-none md:overflow-visible md:p-32">
+            <SkillIcon
+              name="PHP"
+              size="medium"
+              rotate={120}
+              className="p-4"
+            >
+              <PhpIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="MySQL"
+              size="medium"
+              rotate={240}
+              className="p-3"
+            >
+              <MysqlIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Nette"
+              size="medium"
+              rotate={0}
+              className="p-3"
+            >
+              <NetteIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Magento"
+              size="large"
+              rotate={120}
+              className="p-6"
+            >
+              <MagentoIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Java"
+              size="small"
+              rotate={42}
+              className="p-4"
+            >
+              <JavaIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Linux Debian"
+              size="small"
+              rotate={78}
+              className="p-4"
+            >
+              <DebianIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Node.js"
+              size="small"
+              rotate={-42}
+              className="p-3"
+            >
+              <NodeIcon />
+            </SkillIcon>
+            <SkillIcon
+              name="Apache"
+              size="small"
+              rotate={-78}
+              className="p-4"
+            >
+              <ApacheIcon />
+            </SkillIcon>
           </div>
         </div>
       </div>
