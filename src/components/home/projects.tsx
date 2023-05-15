@@ -33,7 +33,7 @@ export default function Projects() {
         <div>
           {projects.map((project, idx) => (
             <div
-              className="mb-7 flex border-b-4 border-main pb-7 last:mb-0 last:border-none last:pb-0 md:mb-0 md:border-none md:pb-0"
+              className="mb-4 flex pb-7 last:mb-0 last:pb-0 md:mb-0 md:pb-0"
               key={idx}
             >
               <div className="hidden flex-shrink-0 flex-grow-0 basis-[120px] flex-col items-center md:flex">
