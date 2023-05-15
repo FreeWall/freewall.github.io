@@ -6,6 +6,7 @@
 /_next
 /build
 /public/cv/*/*.pdf
+/public/images/optimized
 next-env.d.ts
 
 # local env files

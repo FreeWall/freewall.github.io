@@ -12,6 +12,7 @@
   "dependencies": {
     "@next/bundle-analyzer": "^12.3.1",
     "classnames": "^2.3.2",
+    "file-loader": "^6.2.0",
     "file-saver": "^2.0.5",
     "next": "^12.3.4",
     "next-i18next": "^13.2.2",
@@ -19,7 +20,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-pdf-tailwind": "^2.1.0"
+    "react-pdf-tailwind": "^2.1.0",
+    "webpack-image-resize-loader": "^5.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",

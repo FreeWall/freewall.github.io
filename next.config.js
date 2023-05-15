@@ -1,5 +1,5 @@
 const NextBundleAnalyzer = require('@next/bundle-analyzer');
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants.js');
+const { PHASE_DEVELOPMENT_SERVER, PHASE_EXPORT } = require('next/constants.js');
 
 /**
  * @template {import('next').NextConfig} T
@@ -46,8 +46,23 @@ module.exports = function next(stage) {
           type: 'asset/resource',
         });
         config.module.rules.push({
-          test: /\.jpg$/,
+          test: /\.inline.jpg$/,
           type: 'asset',
+        });
+        config.module.rules.push({
+          test: /^(?!.*(\.inline)\.).*\.(jpg|png|webp)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                publicPath: 'images/optimized',
+                outputPath: '../public/images/optimized',
+              },
+            },
+            {
+              loader: 'webpack-image-resize-loader',
+            },
+          ],
         });
         config.experiments.topLevelAwait = true;
         return config;

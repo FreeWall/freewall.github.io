@@ -2,7 +2,7 @@ import { useApp } from '@/contexts/app';
 import { Image as Img, Path, Svg, Text, View } from '@react-pdf/renderer';
 import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
-import image from '../../../public/images/profilephoto-nature.jpg';
+import image from '../../../public/images/profilephoto-nature.inline.jpg';
 
 export default function Sidebar({
   t,

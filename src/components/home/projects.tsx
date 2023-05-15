@@ -1,6 +1,7 @@
 import { Technology, useApp } from '@/contexts/app';
 import { i18nextLocale } from '@/utils/i18next';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/future/image';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const technologyColor: Record<Technology, string> = {
@@ -99,13 +100,15 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-                {/* {false && project.thumbnail && (
+                {project.thumbnail && (
                   <div>
                     {project.images && (
-                      <div onClick={() => project.onGalleryClick()}>
-                        <img
+                      <div className="w-full">
+                        <Image
                           src={project.thumbnail}
                           alt={project.name}
+                          width={270}
+                          height={270}
                         />
                         <div>
                           <span>{project.images.length}</span>
@@ -113,13 +116,15 @@ export default function Projects() {
                       </div>
                     )}
                     {!project.images && (
-                      <img
+                      <Image
                         src={project.thumbnail}
                         alt={project.name}
+                        width={270}
+                        height={270}
                       />
                     )}
                   </div>
-                )} */}
+                )}
               </div>
             </div>
           ))}

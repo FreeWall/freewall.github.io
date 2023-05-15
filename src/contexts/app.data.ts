@@ -63,7 +63,9 @@ export const appContextData: AppContextProps = {
         en: 'Operation and development of an e-shop portal - your own e-shop in a few clicks. Order management, stock records, detailed statistics, connection to third party services, 50+ clients.',
       },
       technologies: ['PHP', 'MySQL', 'JS', 'jQuery', 'Nette'],
-      thumbnail: '/images/projects/shopmaker/screenshot1.png',
+      thumbnail:
+        require('../../public/images/projects/shopmaker/screenshot1.png?width=380&format=webp&quality=90&resizer')
+          .default,
       images: [
         {
           source: '/images/projects/shopmaker/screenshot1.png',
