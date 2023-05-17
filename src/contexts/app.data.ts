@@ -68,28 +68,52 @@ export const appContextData: AppContextProps = {
           .default,
       images: [
         {
-          source: '/images/projects/shopmaker/screenshot1.png',
-          thumbnail: '/images/projects/shopmaker/screenshot1.png',
+          source:
+            require('../../public/images/projects/shopmaker/screenshot1.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/shopmaker/screenshot1.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
         {
-          source: '/images/projects/shopmaker/eshop_product.png',
-          thumbnail: '/images/projects/shopmaker/eshop_product.png',
+          source:
+            require('../../public/images/projects/shopmaker/eshop_product.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/shopmaker/eshop_product.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
         {
-          source: '/images/projects/shopmaker/admin_prehled.png',
-          thumbnail: '/images/projects/shopmaker/admin_prehled.png',
+          source:
+            require('../../public/images/projects/shopmaker/admin_prehled.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/shopmaker/admin_prehled.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
         {
-          source: '/images/projects/shopmaker/admin_objednavky.png',
-          thumbnail: '/images/projects/shopmaker/admin_objednavky.png',
+          source:
+            require('../../public/images/projects/shopmaker/admin_objednavky.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/shopmaker/admin_objednavky.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
         {
-          source: '/images/projects/shopmaker/admin_produkty.png',
-          thumbnail: '/images/projects/shopmaker/admin_produkty.png',
+          source:
+            require('../../public/images/projects/shopmaker/admin_produkty.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/shopmaker/admin_produkty.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
         {
-          source: '/images/projects/shopmaker/admin_statistiky.png',
-          thumbnail: '/images/projects/shopmaker/admin_statistiky.png',
+          source:
+            require('../../public/images/projects/shopmaker/admin_statistiky.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/shopmaker/admin_statistiky.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
       ],
     },
@@ -107,11 +131,17 @@ export const appContextData: AppContextProps = {
         en: 'Operation and development of website and game plugins, microtransaction business model, a 10+ member team.',
       },
       technologies: ['Java', 'PHP', 'MySQL', 'JS', 'jQuery'],
-      thumbnail: '/images/projects/realcraft/web1.png',
+      thumbnail:
+        require('../../public/images/projects/realcraft/web1.png?width=380&format=webp&quality=90&resizer')
+          .default,
       images: [
         {
-          source: '/images/projects/realcraft/web1.png',
-          thumbnail: '/images/projects/realcraft/web1.png',
+          source:
+            require('../../public/images/projects/realcraft/web1.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/realcraft/web1.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
       ],
     },
@@ -128,11 +158,17 @@ export const appContextData: AppContextProps = {
         en: 'Completed over 15 projects - coding graphic designs, CMS systems implementation.',
       },
       technologies: ['PHP', 'HTML', 'JS'],
-      thumbnail: '/images/projects/freelancer/web1.png',
+      thumbnail:
+        require('../../public/images/projects/freelancer/web1.png?width=380&format=webp&quality=90&resizer')
+          .default,
       images: [
         {
-          source: '/images/projects/freelancer/web1.png',
-          thumbnail: '/images/projects/freelancer/web1.png',
+          source:
+            require('../../public/images/projects/freelancer/web1.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/freelancer/web1.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
       ],
     },
@@ -149,11 +185,17 @@ export const appContextData: AppContextProps = {
         en: 'Operation and development of website and game mode, microtransaction business model, a 20+ member team.',
       },
       technologies: ['Pawn', 'PHP', 'MySQL', 'JS', 'jQuery'],
-      thumbnail: '/images/projects/realny-zivot/web1.png',
+      thumbnail:
+        require('../../public/images/projects/realny-zivot/web1.png?width=380&format=webp&quality=90&resizer')
+          .default,
       images: [
         {
-          source: '/images/projects/realny-zivot/web1.png',
-          thumbnail: '/images/projects/realny-zivot/web1.png',
+          source:
+            require('../../public/images/projects/realny-zivot/web1.png?format=webp&quality=90&resizer')
+              .default,
+          thumbnail:
+            require('../../public/images/projects/realny-zivot/web1.png?width=380&format=webp&quality=90&resizer')
+              .default,
         },
       ],
     },
@@ -166,7 +208,6 @@ export const appContextData: AppContextProps = {
       years: '2009 - 2013',
       type: { cs: 'vzdělání', en: 'education' },
       technologies: ['PHP', 'MySQL', 'Java', 'C', 'JS'],
-      thumbnail: '/images/projects/spseplzen.png',
     },
   ],
 };

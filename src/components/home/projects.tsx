@@ -52,7 +52,7 @@ export default function Projects() {
                 <div className="absolute left-[calc(50%_-_6px)] top-[6px] h-[12px] w-[12px] rounded-full bg-conversion" />
               </div>
               <div className="flex-grow md:mb-14 md:flex md:flex-shrink-0">
-                <div>
+                <div className="flex-1">
                   <div className="flex items-center md:block">
                     <div className="mr-4 h-[44px] w-1 bg-conversion md:hidden"></div>
                     <div>
@@ -109,10 +109,8 @@ export default function Projects() {
                           alt={project.name}
                           width={270}
                           height={270}
+                          className="rounded-md"
                         />
-                        <div>
-                          <span>{project.images.length}</span>
-                        </div>
                       </div>
                     )}
                     {!project.images && (
