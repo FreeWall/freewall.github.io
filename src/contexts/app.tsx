@@ -34,7 +34,6 @@ export interface ProjectProps {
   technologies?: Technology[];
   thumbnail?: string;
   images?: { source: string; thumbnail: string }[];
-  onGalleryClick?: () => void;
 }
 
 export interface AppContextProps {

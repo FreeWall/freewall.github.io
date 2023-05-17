@@ -1,7 +1,9 @@
-import { Technology, useApp } from '@/contexts/app';
+import { ProjectProps, Technology, useApp } from '@/contexts/app';
 import { i18nextLocale } from '@/utils/i18next';
 import { useTranslation } from 'next-i18next';
+import dynamic from 'next/dist/shared/lib/dynamic';
 import Image from 'next/future/image';
+import { useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const technologyColor: Record<Technology, string> = {
@@ -21,9 +23,12 @@ const technologyColor: Record<Technology, string> = {
   C: '#006bbb',
 };
 
+const Gallery = dynamic(() => import('./gallery'));
+
 export default function Projects() {
   const { t, i18n } = useTranslation('common');
   const { projects } = useApp();
+  const [galleryProject, setGalleryProject] = useState<ProjectProps>();
 
   return (
     <div className="bg-secondary">
@@ -31,6 +36,7 @@ export default function Projects() {
         <h2 className="mb-8 text-2xl font-semibold text-hightlight md:mb-16 md:text-3xl">
           {t('experience')}
         </h2>
+        {galleryProject && <Gallery project={galleryProject} />}
         <div>
           {projects.map((project, idx) => (
             <div
@@ -109,7 +115,8 @@ export default function Projects() {
                           alt={project.name}
                           width={270}
                           height={270}
-                          className="rounded-md"
+                          className="cursor-pointer rounded-md"
+                          onClick={() => setGalleryProject(project)}
                         />
                       </div>
                     )}
