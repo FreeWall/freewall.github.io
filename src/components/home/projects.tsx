@@ -36,7 +36,12 @@ export default function Projects() {
         <h2 className="mb-8 text-2xl font-semibold text-hightlight md:mb-16 md:text-3xl">
           {t('experience')}
         </h2>
-        {galleryProject && <Gallery project={galleryProject} />}
+        {galleryProject && (
+          <Gallery
+            project={galleryProject}
+            onClose={() => setGalleryProject(undefined)}
+          />
+        )}
         <div>
           {projects.map((project, idx) => (
             <div
