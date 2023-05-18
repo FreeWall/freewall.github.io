@@ -51,7 +51,17 @@ export default function Header() {
           <div className="mx-4 h-[50px] w-1 bg-conversion md:hidden" />
           <div className="items-center md:flex">
             <Link href="/">
-              <a className="text-[20px] md:text-2xl">
+              <a
+                className="text-[20px] md:text-2xl"
+                onClick={(event) => {
+                  event.preventDefault();
+                  window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth',
+                  });
+                }}
+              >
                 <span className="font-semibold text-hightlight">
                   {names[0]}
                 </span>{' '}

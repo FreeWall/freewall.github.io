@@ -32,16 +32,16 @@ export default function Projects() {
 
   return (
     <div className="bg-secondary">
+      {galleryProject && (
+        <Gallery
+          project={galleryProject}
+          onClose={() => setGalleryProject(undefined)}
+        />
+      )}
       <div className="wrapper py-8 md:py-16">
         <h2 className="mb-8 text-2xl font-semibold text-hightlight md:mb-16 md:text-3xl">
           {t('experience')}
         </h2>
-        {galleryProject && (
-          <Gallery
-            project={galleryProject}
-            onClose={() => setGalleryProject(undefined)}
-          />
-        )}
         <div>
           {projects.map((project, idx) => (
             <div

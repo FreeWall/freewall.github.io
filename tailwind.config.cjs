@@ -29,6 +29,8 @@ module.exports = {
       },
       animation: {
         progress: 'progress 0.7s ease 0.5s forwards',
+        fadeIn: 'fadeIn 0.4s ease forwards',
+        slideIn: 'slideIn 0.4s ease forwards',
       },
       keyframes: {
         progress: {
@@ -37,6 +39,22 @@ module.exports = {
           },
           '100%': {
             transform: 'translateX(0%)',
+          },
+        },
+        fadeIn: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
+        slideIn: {
+          '0%': {
+            transform: 'scale(0.8)',
+          },
+          '100%': {
+            transform: 'scale(1)',
           },
         },
       },
