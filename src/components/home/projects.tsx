@@ -62,7 +62,7 @@ export default function Projects() {
                 )}
                 <div className="absolute left-[calc(50%_-_6px)] top-[6px] h-[12px] w-[12px] rounded-full bg-conversion" />
               </div>
-              <div className="flex-grow md:mb-14 md:flex md:flex-shrink-0">
+              <div className="flex-grow md:mb-14 md:flex-shrink-0 lg:flex">
                 <div className="flex-1">
                   <div className="flex items-center md:block">
                     <div className="mr-4 h-[44px] w-1 bg-conversion md:hidden"></div>
@@ -112,7 +112,7 @@ export default function Projects() {
                   </div>
                 </div>
                 {project.thumbnail && (
-                  <div>
+                  <div className="mt-6 lg:mt-0">
                     {project.images && (
                       <div className="w-full">
                         <Image
@@ -120,7 +120,7 @@ export default function Projects() {
                           alt={project.name}
                           width={270}
                           height={270}
-                          className="cursor-pointer rounded-md"
+                          className="max-w-[210px] cursor-pointer rounded-md lg:max-w-max"
                           onClick={() => setGalleryProject(project)}
                         />
                       </div>

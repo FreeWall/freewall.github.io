@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
         </div>
         {!!languages?.length && (
-          <div className="mb-8 px-7 md:mb-12 md:px-0">
+          <div className="mb-8 px-7 md:mb-12 md:hidden lg:block lg:px-0">
             <div className="mb-3 text-xl font-semibold text-hightlight md:mb-2.5 md:text-right">
               {new Date().getFullYear()}
             </div>
