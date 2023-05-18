@@ -1,6 +1,7 @@
 import { ProjectProps } from '@/contexts/app';
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import { useEffect, useRef } from 'react';
+import { FaTimes } from 'react-icons/fa';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -30,11 +31,19 @@ export default function Gallery(props: GalleryProps) {
       className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center"
     >
       <div
-        className="absolute h-full w-full bg-black opacity-50"
+        className="absolute h-full w-full bg-black opacity-60"
         onClick={() => props.onClose?.()}
       />
-      <div className="h-full w-full">
-        <div className="h-full py-28">
+      <div className="z-10 flex h-full w-full flex-col">
+        <div className="flex justify-end">
+          <div
+            className="cursor-pointer p-10 text-white"
+            onClick={() => props.onClose?.()}
+          >
+            <FaTimes size={48} />
+          </div>
+        </div>
+        <div className="h-full w-full overflow-y-hidden">
           <Swiper
             className="h-full"
             slidesPerView={1}
@@ -55,6 +64,18 @@ export default function Gallery(props: GalleryProps) {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+        <div className="flex items-center justify-center py-8">
+          {props.project.images?.map((image, idx) => (
+            <img
+              key={idx}
+              className="h-[120px] select-none"
+              src={image.thumbnail}
+              alt={props.project.name}
+              width={160}
+              loading="lazy"
+            />
+          ))}
         </div>
       </div>
     </div>

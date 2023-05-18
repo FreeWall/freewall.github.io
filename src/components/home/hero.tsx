@@ -28,7 +28,7 @@ export default function Hero() {
           className="hidden md:block"
           src="/images/profilephoto-hero.webp"
           width={300}
-          height={300}
+          height={273}
           alt={author.fullname}
         />
         <div className="mb-8 flex-1 px-7 md:mb-10 md:ml-20 md:bg-transparent md:px-0">
