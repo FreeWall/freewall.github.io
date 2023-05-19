@@ -198,9 +198,7 @@ export default function Skills() {
             <h3 className="mb-3 text-2xl font-semibold text-hightlight md:hidden">
               {t('frontend-skills')}
             </h3>
-            <p className="text-base">
-              - react, nextjs, typescript, tailwindcss
-            </p>
+            <p className="text-base">{t('frontend-skills-text')}</p>
           </div>
         </div>
         <div className="flex flex-col items-center justify-end md:flex-row md:space-x-20 md:pb-4">
@@ -211,9 +209,7 @@ export default function Skills() {
             <h3 className="mb-3 text-2xl font-semibold text-hightlight md:hidden">
               {t('backend-skills')}
             </h3>
-            <p className="text-base">
-              - php, mysql, magento, nette, apache, linux
-            </p>
+            <p className="text-base">{t('backend-skills-text')}</p>
           </div>
           <div className="relative -mt-16 scale-[.8] overflow-hidden p-32 py-40 md:mx-0 md:transform-none md:overflow-visible md:p-32">
             <SkillIcon
