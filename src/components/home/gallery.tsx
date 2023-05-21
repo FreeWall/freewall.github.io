@@ -76,7 +76,7 @@ export default function Gallery(props: GalleryProps) {
         <div className="h-full w-full animate-slideIn items-center overflow-y-hidden">
           <Swiper
             modules={[Navigation]}
-            className="h-full items-center"
+            className="h-full"
             slidesPerView={1}
             centeredSlides={true}
             centerInsufficientSlides={true}
@@ -89,13 +89,14 @@ export default function Gallery(props: GalleryProps) {
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
+            onClick={(swiper, { target }) =>
+              target instanceof HTMLDivElement && props.onClose?.()
+            }
           >
             {props.project.images?.map((image, idx) => (
               <SwiperSlide
+                className="!flex h-full items-center"
                 key={idx}
-                onClick={({ target }) =>
-                  target instanceof HTMLDivElement && props.onClose?.()
-                }
               >
                 <img
                   className="mx-auto max-h-full select-none"
