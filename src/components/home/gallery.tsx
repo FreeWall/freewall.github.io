@@ -60,10 +60,7 @@ export default function Gallery(props: GalleryProps) {
       ref={galleryRef}
       className="fixed left-0 top-0 z-50 flex h-full w-full animate-fadeIn items-center justify-center"
     >
-      <div
-        className="absolute h-full w-full bg-black opacity-60"
-        onClick={() => props.onClose?.()}
-      />
+      <div className="absolute h-full w-full bg-black opacity-60" />
       <div className="z-10 flex h-full w-full flex-col py-8 pt-20 md:py-8">
         <div
           className="absolute right-0 top-0 z-20 flex w-full justify-end md:w-auto"
