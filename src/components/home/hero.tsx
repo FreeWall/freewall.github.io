@@ -30,6 +30,7 @@ export default function Hero() {
           width={300}
           height={273}
           alt={author.fullname}
+          priority={true}
         />
         <div className="mb-8 flex-1 px-7 md:mb-10 md:ml-20 md:bg-transparent md:px-0">
           <h1 className="mb-4 text-2xl font-semibold text-hightlight md:mb-6 md:text-3xl">
