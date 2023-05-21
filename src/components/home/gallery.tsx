@@ -65,11 +65,11 @@ export default function Gallery(props: GalleryProps) {
         onClick={() => props.onClose?.()}
       />
       <div className="z-10 flex h-full w-full flex-col py-8 pt-20 md:py-8">
-        <div className="absolute right-0 top-0 z-20 flex w-full justify-end md:w-auto">
-          <div
-            className="cursor-pointer p-6 text-white md:p-12 md:text-body md:hover:text-white"
-            onClick={() => props.onClose?.()}
-          >
+        <div
+          className="absolute right-0 top-0 z-20 flex w-full justify-end md:w-auto"
+          onClick={() => props.onClose?.()}
+        >
+          <div className="cursor-pointer p-6 text-white md:p-12 md:text-body md:hover:text-white">
             <FaTimes size={32} />
           </div>
         </div>
