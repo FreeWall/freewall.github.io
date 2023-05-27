@@ -1,4 +1,5 @@
 import { useApp } from '@/contexts/app';
+import { i18nextLocale } from '@/utils/i18next';
 import { Image as Img, Path, Svg, Text, View } from '@react-pdf/renderer';
 import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
@@ -7,9 +8,11 @@ import image from '../../../public/images/profilephoto-nature.inline.jpg';
 export default function Sidebar({
   t,
   tw,
+  locale,
 }: {
   t: TFunction<'common'>;
   tw: ReturnType<typeof createTw>;
+  locale: i18nextLocale;
 }) {
   const { author } = useApp();
 
@@ -79,7 +82,9 @@ export default function Sidebar({
                   }
                 />
               </Svg>
-              <Text style={tw('text-sm leading-none ml-3')}>{author.city}</Text>
+              <Text style={tw('text-sm leading-none ml-3')}>
+                {author.city[locale]}
+              </Text>
             </View>
           </View>
         </View>
@@ -108,17 +113,25 @@ export default function Sidebar({
             {t('education')}
           </Text>
           <View style={tw('text-sm leading-6')}>
-            <Text style={tw('font-semibold')}>ZČU v Plzni</Text>
-            <Text>Informatika</Text>
+            <Text style={tw('font-semibold')}>
+              {locale == 'cs' ? 'ZČU v Plzni' : 'University of West Bohemia'}
+            </Text>
+            <Text>{locale == 'cs' ? 'Informatika' : 'Computer science'}</Text>
             <Text>2013 - 2015</Text>
           </View>
           <View style={tw('text-sm leading-6 mt-6')}>
             <Text style={tw('font-semibold')}>VOŠ a SPŠE Plzeň</Text>
-            <Text>Správa počítačových sítí</Text>
+            <Text>
+              {locale == 'cs'
+                ? 'Správa počítačových sítí'
+                : 'Computer networks'}
+            </Text>
             <Text>2009 - 2013</Text>
           </View>
           <View style={tw('text-sm leading-6 mt-6')}>
-            <Text style={tw('font-semibold')}>Angličtina B2</Text>
+            <Text style={tw('font-semibold')}>
+              {locale == 'cs' ? 'Angličtina B2' : 'English B2'}
+            </Text>
           </View>
         </View>
       </View>

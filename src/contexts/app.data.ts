@@ -8,7 +8,10 @@ export const appContextData: AppContextProps = {
     address: ['Česká Bříza 87, 330 11 Plzeň', 'IČ: 03540430'],
     email: 'info@michalvanek.cz',
     phone: '+420 605 574 983',
-    city: 'Plzeň',
+    city: {
+      cs: 'Plzeň',
+      en: 'Pilsen, Czechia',
+    },
   },
   links: [
     {
@@ -33,7 +36,7 @@ export const appContextData: AppContextProps = {
         cs: 'Nábytek, designové prvky a svítidla švýcarského online obchodu. Správa a vývoj headless frontendu s napojením na Magento backend.',
         en: 'Design, furniture and design lamps Swiss online shop. Development of headless frontend integrated with Magento backend.',
       },
-      technologies: ['Magento', 'TS', 'React', 'Next.js'],
+      technologies: ['Magento', 'TS', 'React', 'Next.js', 'GraphQL'],
     },
     {
       name: 'AITI Software',

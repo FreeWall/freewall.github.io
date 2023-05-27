@@ -62,6 +62,7 @@ export default function Cv({
           <Sidebar
             t={t}
             tw={tw}
+            locale={locale}
           />
 
           <View>

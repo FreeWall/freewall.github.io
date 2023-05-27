@@ -12,6 +12,7 @@ export type Technology =
   | 'TS'
   | 'React'
   | 'Next.js'
+  | 'GraphQL'
   | 'Java'
   | 'jQuery'
   | 'Nette'
@@ -43,7 +44,7 @@ export interface AppContextProps {
     address: string[];
     email: string;
     phone: string;
-    city: string;
+    city: Record<i18nextLocale, string>;
   };
   links: {
     name: string;

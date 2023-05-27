@@ -15,6 +15,7 @@ const technologyColor: Record<Technology, string> = {
   TS: '#388ae4',
   React: '#61dafb',
   'Next.js': '#ffffff',
+  GraphQL: '#f6009c',
   Java: '#e51f24',
   jQuery: '#0a7bca',
   Nette: '#368bdd',
