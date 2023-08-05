@@ -8,6 +8,7 @@ export const appContextData: AppContextProps = {
     address: ['Česká Bříza 87, 330 11 Plzeň', 'IČ: 03540430'],
     email: 'info@michalvanek.cz',
     phone: '+420 605 574 983',
+    website: 'michalvanek.cz',
     city: {
       cs: 'Plzeň',
       en: 'Pilsen, Czechia',

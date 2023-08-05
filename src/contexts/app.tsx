@@ -44,6 +44,7 @@ export interface AppContextProps {
     address: string[];
     email: string;
     phone: string;
+    website: string;
     city: Record<i18nextLocale, string>;
   };
   links: {

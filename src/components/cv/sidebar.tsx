@@ -1,6 +1,6 @@
 import { useApp } from '@/contexts/app';
 import { i18nextLocale } from '@/utils/i18next';
-import { Image as Img, Path, Svg, Text, View } from '@react-pdf/renderer';
+import { Image as Img, Link, Path, Svg, Text, View } from '@react-pdf/renderer';
 import { TFunction } from 'i18next';
 import { createTw } from 'react-pdf-tailwind';
 import image from '../../../public/images/profilephoto-nature.inline.jpg';
@@ -29,7 +29,7 @@ export default function Sidebar({
             {t('contact')}
           </Text>
           <View>
-            <View style={tw('flex flex-row items-center mb-3.5')}>
+            <View style={tw('flex flex-row items-center mb-1')}>
               <Svg
                 viewBox="0 0 24 24"
                 width={11}
@@ -50,7 +50,7 @@ export default function Sidebar({
                 {author.phone}
               </Text>
             </View>
-            <View style={tw('flex flex-row items-center mb-3.5')}>
+            <View style={tw('flex flex-row items-center mb-1')}>
               <Svg
                 viewBox="0 0 24 24"
                 width={14}
@@ -64,9 +64,33 @@ export default function Sidebar({
                   }
                 />
               </Svg>
-              <Text style={tw('text-sm leading-none ml-3')}>
+              <Link
+                src={'mailto:' + author.email}
+                style={tw('text-sm inline text-body leading-none px-3 py-3')}
+              >
                 {author.email}
-              </Text>
+              </Link>
+            </View>
+            <View style={tw('flex flex-row items-center mb-3.5')}>
+              <Svg
+                viewBox="0 0 512 512"
+                width={12}
+                height={12}
+                style={tw('w-[14px]')}
+              >
+                <Path
+                  fill="#35393e"
+                  d={
+                    'M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'
+                  }
+                />
+              </Svg>
+              <Link
+                src={'https://' + author.website}
+                style={tw('text-sm text-body leading-none ml-3')}
+              >
+                {author.website}
+              </Link>
             </View>
             <View style={tw('flex flex-row items-center mb-3.5')}>
               <Svg
@@ -129,6 +153,9 @@ export default function Sidebar({
             <Text>2009 - 2013</Text>
           </View>
           <View style={tw('text-sm leading-6 mt-6')}>
+            <Text style={tw('font-semibold')}>
+              {locale == 'cs' ? 'Čeština (rodný jazyk)' : 'Czech (native)'}
+            </Text>
             <Text style={tw('font-semibold')}>
               {locale == 'cs' ? 'Angličtina B2' : 'English B2'}
             </Text>
