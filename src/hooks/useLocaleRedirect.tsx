@@ -22,8 +22,7 @@ export const useLocaleRedirect = (to?: string) => {
       return;
     }
 
-    if (to && to.startsWith('/' + detectedLng) && router.route === '/404') {
-      router.replace('/' + detectedLng + router.route);
+    if (to && to.startsWith('/' + detectedLng)) {
       return;
     }
 
